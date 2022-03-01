@@ -1,0 +1,57 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <include
+        layout="@layout/whorl_view"
+        android:visibility="visible" />
+
+    <!--style="?android:attr/progressBarStyleSmall"
+    style="@style/Widget.AppCompat.ProgressBar.Horizontal"-->
+    <!-- ExtendedViewPager is a custom view and must be referred to by its full package name in XML -->
+    <com.windhans.client.forworld.gallery_view.ExtendedViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar" />
+
+
+    <ImageView
+        android:id="@+id/backward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/forward"
+        android:background="@color/colorTransperent"
+        android:src="@drawable/backward" />
+
+    <ImageView
+        android:id="@+id/forward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@color/colorTransperent"
+        android:src="@drawable/forward" />
+
+    <!--<TextView
+        android:text="@string/swipe_viewpager"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />-->
+
+</RelativeLayout>

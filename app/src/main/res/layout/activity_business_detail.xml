@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_light"
+    tools:context=".Activities.ActivityBusinessDetail">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image_business_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY">
+
+                </ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ten">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/shop" />
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                        android:id="@+id/txt_business_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/BusinessName"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_call_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ten">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/call_new" />
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                        android:id="@+id/txt_contact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:text="9999999999"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/seventeen" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ten">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/message" />
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                        android:id="@+id/txt_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:text="abc@gmail.com"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/seventeen"/>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/ten">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/location" />
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                        android:id="@+id/txt_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:text="Nashik Road"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/seventeen"/>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:paddingLeft="@dimen/ten">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/location"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/txt_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:visibility="gone"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/seventeen">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="2">
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="City">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/txt_city1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:text="Nashik"
+                        android:textColor="@color/black">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:text="Pincode">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/txt_pincode1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:text="40001"
+                        android:textColor="@color/black">
+
+                    </TextView>
+
+                </LinearLayout>-->
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                    android:id="@+id/txt_business_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten"
+                    android:text="@string/details"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/seventeen"
+                    android:textStyle="bold"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/ten">
+
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                        android:id="@+id/txt_business_details1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="State">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/txt_state"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:text="Maharashta"
+                        android:textColor="@color/black">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="District">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/txt_district"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:text="Nashik"
+                        android:textColor="@color/black">
+
+                    </TextView>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btn_view_all_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="@color/apptheme"
+        android:fontFamily="Lato-Black.ttf"
+        android:text="@string/view_all_product"
+        android:textColor="@color/white"
+        android:textSize="@dimen/thirteen" />
+
+</RelativeLayout>

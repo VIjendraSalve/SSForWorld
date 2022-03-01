@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.Activity_My_Balance">
+
+    <include layout="@layout/toolbar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="left"
+            android:background="@drawable/balance_background"
+            android:padding="@dimen/five">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/ten"
+
+            >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/ten"
+                android:backgroundTint="@color/white"
+                android:background="@drawable/wallet_drawer"
+                android:tint="@color/white"
+                android:visibility="gone"
+                />
+
+
+
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                    android:id="@+id/txt_total_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginBottom="@dimen/five"
+                    android:textColor="@color/white"
+                    android:text="0"
+                    android:textSize="25sp"
+                    android:textStyle="bold"/>
+
+
+            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/availablebalance"
+                android:layout_marginTop="@dimen/five"
+                android:textColor="@color/white"
+                android:textSize="16sp">
+
+            </com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular>
+
+
+
+
+
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recenttransaction"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/ten"
+            android:textSize="15sp"
+            android:padding="@dimen/five"
+            android:visibility="gone"
+            >
+
+        </TextView>
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_transaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:padding="@dimen/five"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+    <include layout="@layout/progress_endless" />
+
+    <include layout="@layout/no_record_layout" />
+
+    <include layout="@layout/no_internet_connection" />
+
+    <include layout="@layout/progress_bar" />
+</RelativeLayout>

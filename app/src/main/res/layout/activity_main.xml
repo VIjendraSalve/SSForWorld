@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/apptheme"
+        android:fitsSystemWindows="false"
+        tools:openDrawer="start">
+
+        <RelativeLayout
+            android:id="@+id/mainContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <include
+            layout="@layout/content_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="false"
+            app:itemIconTint="@color/apptheme"
+            app:menu="@menu/activity_main_drawer" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/ten"
+                android:layout_marginEnd="@dimen/ten"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="@dimen/ten">
+                <TextView
+                    android:id="@+id/nav_version"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="V1.1"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp" />
+            </LinearLayout>
+
+        </com.google.android.material.navigation.NavigationView>
+
+
+
+        <!-- app:headerLayout="@layout/nav_header_main"-->
+    </androidx.drawerlayout.widget.DrawerLayout>
+</LinearLayout>

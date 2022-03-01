@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/five"
+        app:cardElevation="@dimen/five"
+        app:cardMaxElevation="@dimen/five"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:padding="@dimen/five">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:gravity="center"
+                android:layout_weight="3.5">
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@color/white"
+                android:scaleType="centerInside"
+                android:src="@drawable/no" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="6.5"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ten"
+                android:orientation="vertical">
+            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                android:id="@+id/txt_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="Relax Chair"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                android:id="@+id/txt_product_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/three"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="Relax Chair"
+                android:textColor="@color/pin_normal"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                    android:id="@+id/txt_product_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:layout_marginRight="@dimen/fifteen"
+                    android:text="Rs.1000"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:id="@+id/txt_product_original_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/five"
+                    android:text="Rs.1000"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/three"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:layout_weight="1.2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/five"
+                            app:cardUseCompatPadding="false">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/white"
+                                android:weightSum="10">
+
+
+
+                                <LinearLayout
+                                    android:id="@+id/ll_decrement_count"
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="2.5"
+                                    android:background="@color/grey_1"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="17dp"
+                                        android:layout_height="17dp"
+                                        android:layout_gravity="center"
+                                        android:adjustViewBounds="true"
+                                        android:background="@drawable/minus"
+                                        android:scaleType="fitCenter" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="5"
+                                    android:background="@color/white">
+
+                                    <EditText
+                                        android:id="@+id/edt_product_quantity"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="30dp"
+                                        android:background="@drawable/edittext_background"
+                                        android:editable="false"
+                                        android:focusable="false"
+                                        android:gravity="center"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="number"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/fourteen" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_increment_count"
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="2.5"
+                                    android:background="@color/grey_1"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="17dp"
+                                        android:layout_height="17dp"
+                                        android:layout_gravity="center"
+                                        android:adjustViewBounds="true"
+                                        android:background="@drawable/plus"
+                                        android:scaleType="fitCenter" />
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/edittext_background"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:text="@string/remove"
+                    android:textColor="@color/red_a" />
+
+                <ImageView
+                    android:id="@+id/btn_removeFromCart"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_delete_black_24dp"
+                    android:tint="@color/red_a"
+                    android:layout_marginLeft="@dimen/twenty"
+                    />
+
+
+            </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

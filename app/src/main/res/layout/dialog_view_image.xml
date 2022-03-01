@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    style="@style/AlertDialog.AppCompat"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.windhans.client.forworld.gallery_view.CustomImageView
+                    android:id="@+id/iv_doc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ProgressBar
+                    android:id="@+id/dialog_progress_bar"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/thirty"
+                    android:layout_height="@dimen/thirty" />
+
+           </FrameLayout>
+            <androidx.cardview.widget.CardView
+                android:layout_margin="@dimen/thirteen"
+                android:layout_width="@dimen/thirty"
+                android:layout_height="@dimen/thirty"
+                app:cardCornerRadius="@dimen/fifteen">
+                <ImageView
+                    android:id="@+id/iv_dialog_close"
+                    android:background="@drawable/delete_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+            </androidx.cardview.widget.CardView>
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+

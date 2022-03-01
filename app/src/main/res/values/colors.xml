@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#2c699e</color>
+    <color name="colorPrimaryDark">#0099cc</color>
+    <color name="colorAccent">#000000</color>-->
+   <!-- <color name="colorPrimary">#8E44AD</color>-->
+  <!--  <color name="colorPrimary">#8E44AD</color>-->
+    <color name="colorPrimary">#09A4AD</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#000000</color>
+
+  <!--  <color name="apptheme">#4B0082</color>-->
+    <color name="apptheme">#09A4AD</color>
+   <!-- <color name="apptheme">#8F2927</color>-->
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <color name="purple">#478cc9</color>
+    <color name="blue">#4e5ae1</color>
+    <color name="blue_new">#4e5ae1</color>
+    <color name="green_a">#6fb436</color>
+    <color name="green_new">#5FA815</color>
+    <color name="red_a">#ce232c</color>
+    <color name="grey_1">#bababa</color>
+    <color name="grey_light">#e7e7e7</color>
+    <color name="pin_normal">#6B767E</color>
+    <color name="trans_orange">#78fa4a23</color>
+    <color name="off_white_one">#f4d3b7</color>
+    <color name="colorGray">#9b9999</color>
+    <color name="color_background_transparent">#00f5f1f1</color>
+    <color name="primary_pink">#00BBB5</color>
+    <color name="primary_orange">#FBAF3F</color>
+    <color name="primary_orange_new">#E68E1C</color>
+    <color name="primary_blue">#4B9DD6</color>
+    <color name="primary_green">#2CB4B4</color>
+    <color name="light_gray">#dadbdc</color>
+    <color name="text_view">#606060</color>
+    <color name="text_view1">#902900BB</color>
+    <color name="red">#ff0000</color>
+    <color name="red_new">#F02E2E</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="transparent">#55000000</color>
+    <color name="material_stepper_bottom_bar_text">#757575</color>
+    <color name="semi_transparent_color">#22000000</color>
+    <color name="colorTransperent">#55000000</color>
+
+    <color name="whorlview_material_red">#F44336</color>
+    <color name="whorlview_material_green">#4CAF50</color>
+    <color name="whorlview_material_blue">#5677fc</color>
+    <color name="yellow">#F59A13</color>
+
+    <color name="light_blue">#3777e6</color>
+    <color name="error_stroke_color">#F27474</color>
+    <color name="warning_stroke_color">#F8BB86</color>
+</resources>

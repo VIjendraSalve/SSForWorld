@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/offerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Offer Name"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="@dimen/ten"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/offerDescription1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Offer Details"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_marginTop="@dimen/five"
+            />
+        <TextView
+            android:id="@+id/offerDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Offer Description"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_marginTop="@dimen/five"
+
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_offerType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="offer Type"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginLeft="@dimen/ten"
+        />
+
+    <TextView
+        android:id="@+id/txt_validity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Validity"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginLeft="@dimen/ten"
+        android:layout_marginTop="@dimen/five"
+        />
+
+    <TextView
+        android:id="@+id/txt_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="offer price"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginLeft="@dimen/ten"
+        android:layout_marginTop="@dimen/five"
+        />
+
+    <TextView
+        android:id="@+id/txt_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="offer Code"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginLeft="@dimen/ten"
+        android:layout_marginTop="@dimen/five"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txt_terms1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Terms And Condition"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginTop="@dimen/five"
+            />
+        <TextView
+            android:id="@+id/txt_terms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="offer terms"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginLeft="@dimen/twenty"
+            android:layout_marginTop="@dimen/two"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Ok"
+        android:background="@color/apptheme"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/ten"
+        />
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/ten"
+        app:cardElevation="@dimen/ten"
+        app:cardUseCompatPadding="true"
+        tools:style="@style/CardView"
+        tools:ignore="PrivateResource">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ten"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Title"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_question"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/enter_title"
+                        android:imeOptions="actionNext"
+                        android:text=""
+                        android:inputType="textMultiLine"
+                        android:padding="10sp"
+                        android:textSize="15sp"
+                        android:paddingBottom="@dimen/five"
+                        android:background="@drawable/black_border"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ten"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/desc"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColorHint="#c5c5c5">
+
+                    <EditText
+                        android:id="@+id/edt_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="start"
+                        android:focusable="true"
+                        android:hint="@string/adddesc"
+                        android:imeOptions="actionDone"
+                        android:inputType="textMultiLine"
+                        android:paddingTop="@dimen/ten"
+                        android:paddingBottom="2dp"
+                        android:singleLine="false"
+                        android:textColor="#000"
+                        android:textCursorDrawable="@drawable/bg_input_cursor"
+                        android:textSize="18sp"
+                        android:background="@drawable/black_border"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_background"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/fourteen"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+
+    <include layout="@layout/progress_endless" />
+
+    <include layout="@layout/no_record_layout" />
+
+    <include layout="@layout/no_internet_connection" />
+
+    <include layout="@layout/progress_bar" />
+</LinearLayout>

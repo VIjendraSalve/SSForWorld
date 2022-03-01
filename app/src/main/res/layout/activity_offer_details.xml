@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context=".Activities.Activity_offer_details">
+
+    <include layout="@layout/toolbar" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:background="@color/colorGray"
+        android:layout_marginBottom="@dimen/ten"/>
+
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:scrollbars="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/light_gray"
+                android:padding="@dimen/ten">
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:id="@+id/txt_offerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Offer Name"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten"
+                    android:padding="@dimen/ten"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/price"
+                        android:textSize="12sp"/>
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                        android:id="@+id/txt_offerPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Details"
+                        android:textColor="@color/apptheme"
+                        android:textSize="15sp" />
+
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten"
+                    android:text="@string/validity"
+                    android:textSize="12sp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:orientation="horizontal">
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Offer expires "
+                        android:visibility="gone"
+                        android:textColor="@color/apptheme"
+                        android:textSize="15sp" />
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                        android:id="@+id/txt_offerDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="24 August 2019"
+                        android:textColor="@color/apptheme"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten"
+                    android:padding="@dimen/ten"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/offercode"
+                        android:textSize="12sp"/>
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                        android:id="@+id/txt_offerCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="code"
+                        android:textColor="@color/apptheme"
+                        android:textSize="15sp" />
+
+
+
+
+
+
+
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/desc"
+                        android:layout_marginTop="@dimen/ten"
+                        android:textSize="12sp"/>
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                        android:id="@+id/txt_offerDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Details"
+                        android:textColor="@color/apptheme"
+                        android:textSize="15sp" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_product_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/ten"
+                    android:layout_marginTop="@dimen/ten"
+                    android:background="@color/apptheme"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ten"
+                        android:layout_weight="1.8"
+                        android:text="@string/productdetails"
+                        android:paddingLeft="@dimen/ten"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imageview_expand"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="0.2"
+                        android:backgroundTint="@color/white"
+                        />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleView_ProductData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten"
+                    android:scrollbars="vertical"
+                    android:visibility="visible">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    <Button
+        android:id="@+id/btn_applyNow"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/recycleView_ProductData"
+        android:layout_marginTop="@dimen/twenty"
+        android:background="@color/apptheme"
+        android:text="@string/apply_now"
+        android:textColor="@color/white" />
+</RelativeLayout>

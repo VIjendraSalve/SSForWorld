@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="@dimen/five"
+        app:cardCornerRadius="@dimen/five">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/ll_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/RL_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+
+                    <RelativeLayout
+                        android:id="@+id/ll_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/five"
+                        android:layout_marginTop="@dimen/five"
+                        android:layout_alignParentLeft="true">
+
+                        <ImageView
+                            android:id="@+id/image_unlike"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/unlike" />
+
+                        <ImageView
+                            android:id="@+id/image_like"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/like"
+                            android:visibility="gone"
+
+                            />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/txt_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/RL_image"
+                    android:layout_marginRight="@dimen/ten"
+                    android:layout_marginLeft="@dimen/five"
+                    android:padding="@dimen/five">
+
+                    <TextView
+                        android:id="@+id/txt_product_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="Product Name"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_vendor_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/txt_product_name"
+                        android:layout_marginTop="@dimen/ten">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/shop" />
+
+                        <TextView
+                            android:id="@+id/txt_vendor_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:layout_gravity="center"
+                            android:text="Vendor Name"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_vendor_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/ll_vendor_name"
+                        android:layout_marginTop="@dimen/five">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/location" />
+
+                        <TextView
+                            android:id="@+id/txt_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:ellipsize="end"
+                            android:text="location"
+                            android:maxLines="2"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/ll_vendor_location"
+                        android:layout_marginTop="@dimen/five">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/rupee" />
+
+                    <TextView
+                        android:id="@+id/txt_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:text="40000"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_main"
+                android:padding="@dimen/five"
+                android:layout_marginTop="@dimen/ten">
+
+                <LinearLayout
+                    android:id="@+id/btn_call_now"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/ten"
+                    android:gravity="center"
+                    android:layout_marginRight="@dimen/ten"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_button">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/call_new"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerInside"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:text="Call Now"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_send_enquiry"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/ten"
+                    android:layout_marginRight="@dimen/ten"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_button">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/message"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerInside"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:text="Submit Enquiry"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

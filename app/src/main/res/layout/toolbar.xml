@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/apptheme"
+    android:minHeight="?attr/actionBarSize"
+    app:theme="@style/AppTheme.Toolbar"
+    app:titleTextAppearance="@style/my_style">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            >
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:id="@+id/tv_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:gravity="left"
+                    android:textStyle="bold"
+                    />
+
+
+                <ImageView
+                    android:id="@+id/iv_notification"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/nav_notification"
+                    android:layout_marginRight="@dimen/ten"
+                    android:tint="@color/white"/>
+                <ImageView
+                    android:id="@+id/iv_edit"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true"
+
+                    app:srcCompat="@drawable/ic_edit_black_24dp"
+                    android:layout_marginRight="@dimen/ten"
+                    android:tint="@color/white"
+                    android:layout_centerInParent="true"
+                    />
+               <!-- <SearchView
+                    android:id="@+id/search"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:layout_centerVertical="true"
+                   android:layout_toLeftOf="@+id/iv_logo"
+                    android:src="@drawable/search_icon"
+                    android:layout_marginRight="@dimen/five"
+                    android:visibility="gone"/>-->
+              <!--  <ImageView
+                    android:id="@+id/iv_logo"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/ten"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/newapplogo"
+                    android:visibility="visible"
+                    android:layout_centerInParent="true"
+                    />-->
+
+
+        </RelativeLayout>
+
+
+</androidx.appcompat.widget.Toolbar>

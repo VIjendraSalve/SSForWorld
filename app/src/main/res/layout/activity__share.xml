@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+
+    <include layout="@layout/toolbar" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/refere" />
+
+        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/twenty"
+            android:gravity="center"
+            android:text="@string/share_message"
+            android:textColor="@color/apptheme"
+            android:textSize="@dimen/seventeen" />
+
+        <Button
+            android:id="@+id/btn_share_code"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/ten"
+            android:background="@drawable/dotted"
+            android:gravity="center"
+            android:textColor="@color/apptheme"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_share_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/twenty"
+            android:background="@drawable/gradient"
+            android:drawableLeft="@drawable/ic_share_black_24dp"
+            android:drawableTint="@color/white"
+            android:paddingLeft="@dimen/ten"
+            android:paddingRight="@dimen/ten"
+            android:text="@string/refernow"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

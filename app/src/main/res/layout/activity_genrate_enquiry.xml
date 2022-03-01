@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include layout="@layout/toolbar"/>
+
+
+    <ScrollView
+        android:id="@+id/ll_nested"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_save"
+        android:layout_below="@+id/toolbar"
+        android:scrollbars="vertical"
+        android:layout_marginBottom="@dimen/fifty">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/five"
+            android:layout_marginTop="@dimen/ten"
+            android:layout_marginRight="@dimen/five"
+            android:orientation="vertical">
+
+
+            <!--  <android.support.design.widget.TextInputLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/fifteen">
+
+                  <android.support.design.widget.TextInputEditText
+                      android:id="@+id/edt_Name"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="@dimen/ten"
+                      android:layout_marginLeft="@dimen/ten"
+                      android:layout_marginTop="20dp"
+                      android:background="@drawable/button_regiter"
+                      android:hint="Enter Name"
+                      android:imeOptions="actionNext"
+                      android:inputType="text"
+                      android:padding="@dimen/seven"
+                      android:textColor="@color/black" />
+              </android.support.design.widget.TextInputLayout>-->
+            <com.windhans.client.forworld.customfonts.EditText_Poppins_Medium
+                android:id="@+id/edt_Name"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginTop="@dimen/fifteen"
+                android:layout_marginRight="@dimen/ten"
+                android:background="@drawable/edittext_background"
+                android:digits="qwertzuiopasdfghjklyxcvbnmABCDEFGHIJKLMNOPQRSTUVWXYZ,. "
+                android:hint="@string/firstname"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten"
+                android:singleLine="true"
+                android:text=""
+                android:textSize="16sp"
+
+                />
+            <!--  <android.support.design.widget.TextInputLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/fifteen">
+
+                  <android.support.design.widget.TextInputEditText
+                      android:id="@+id/edt_mobile"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="@dimen/ten"
+                      android:layout_marginLeft="@dimen/ten"
+                      android:layout_marginTop="20dp"
+                      android:background="@drawable/button_regiter"
+                      android:hint="Enter Mobile"
+                      android:imeOptions="actionNext"
+                      android:inputType="number"
+                      android:maxLength="10"
+                      android:padding="@dimen/seven"
+                      android:textColor="@color/black" />
+              </android.support.design.widget.TextInputLayout>-->
+            <com.windhans.client.forworld.customfonts.EditText_Poppins_Medium
+                android:id="@+id/edt_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/edt_Name"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginRight="@dimen/ten"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/mobile"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingLeft="@dimen/fifteen"
+                android:paddingRight="@dimen/fifteen"
+                android:singleLine="true"
+                android:text=""
+                android:textSize="16sp" />
+            <!-- <android.support.design.widget.TextInputLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="@dimen/fifteen">
+
+                 <android.support.design.widget.TextInputEditText
+                     android:id="@+id/edt_Address"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginStart="@dimen/ten"
+                     android:layout_marginLeft="@dimen/ten"
+                     android:layout_marginTop="20dp"
+                     android:background="@drawable/button_regiter"
+                     android:hint="Enter Address"
+                     android:imeOptions="actionNext"
+                     android:inputType="text"
+                     android:padding="@dimen/seven"
+                     android:textColor="@color/black" />
+             </android.support.design.widget.TextInputLayout>-->
+            <com.windhans.client.forworld.customfonts.EditText_Poppins_Medium
+                android:id="@+id/edt_Address"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/edt_mobile"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginRight="@dimen/ten"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/Address1"
+                android:imeOptions="actionNext"
+                android:paddingLeft="@dimen/fifteen"
+                android:paddingRight="@dimen/fifteen"
+                android:inputType="text"
+                android:singleLine="true"
+                android:text=""
+                android:textSize="16sp" />
+            <!--  <android.support.design.widget.TextInputLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/fifteen">
+
+                  <android.support.design.widget.TextInputEditText
+                      android:id="@+id/edt_city"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="@dimen/ten"
+                      android:layout_marginLeft="@dimen/ten"
+                      android:layout_marginTop="20dp"
+                      android:background="@drawable/button_regiter"
+                      android:hint="Enter City"
+                      android:imeOptions="actionDone"
+                      android:inputType="text"
+                      android:padding="@dimen/seven"
+                      android:textColor="@color/black" />
+              </android.support.design.widget.TextInputLayout>-->
+            <com.windhans.client.forworld.customfonts.EditText_Poppins_Medium
+                android:id="@+id/edt_city"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_below="@+id/edt_Address"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginRight="@dimen/ten"
+                android:background="@drawable/edittext_background"
+                android:digits="qwertzuiopasdfghjklyxcvbnmABCDEFGHIJKLMNOPQRSTUVWXYZ,. "
+                android:hint="@string/City"
+                android:paddingLeft="@dimen/fifteen"
+                android:paddingRight="@dimen/fifteen"
+                android:singleLine="true"
+                android:text=""
+                android:textSize="16sp" />
+            <!-- <android.support.design.widget.TextInputLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="@dimen/ten"
+                 android:layout_marginTop="@dimen/twenty"
+                 android:layout_marginRight="@dimen/ten"
+                 android:textColorHint="#c5c5c5">
+
+                 <EditText
+                     android:id="@+id/edt_purpose"
+                     android:layout_width="match_parent"
+                     android:layout_height="100dp"
+                     android:background="@drawable/button_regiter"
+                     android:gravity="start"
+                     android:hint="Enter Purpose"
+                     android:imeOptions="actionDone"
+                     android:inputType="text|textMultiLine|textCapSentences"
+                     android:maxLength="1000"
+                     android:paddingLeft="@dimen/five"
+                     android:paddingTop="@dimen/ten"
+                     android:textColor="@color/black" />
+             </android.support.design.widget.TextInputLayout>-->
+
+            <com.windhans.client.forworld.customfonts.EditText_Poppins_Medium
+                android:id="@+id/edt_purpose"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/edt_city"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginRight="@dimen/ten"
+                android:background="@drawable/edittext_background"
+                android:digits="qwertzuiopasdfghjklyxcvbnmABCDEFGHIJKLMNOPQRSTUVWXYZ,. "
+                android:hint="@string/purpose"
+                android:paddingLeft="@dimen/fifteen"
+                android:paddingRight="@dimen/fifteen"
+                android:singleLine="true"
+                android:text=""
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/category_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginTop="@dimen/twenty"
+                android:layout_marginRight="@dimen/ten"
+                android:padding="20dp"
+                android:textColorHint="#c5c5c5"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+
+      >
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/apptheme"
+            android:inputType="textCapWords"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <!--<include layout="@layout/progress_endless" />-->
+
+    <!--<include layout="@layout/no_record_layout" />-->
+
+    <include layout="@layout/no_internet_connection" />
+
+    <!-- <include layout="@layout/progress_bar" />-->
+</RelativeLayout>

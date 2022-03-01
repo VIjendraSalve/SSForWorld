@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.windhans.client.forworld.widget.WhorlView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/progress_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center"
+    android:visibility="gone"
+    app:whorlview_circle_colors="#5677fc_#F44336_#4CAF50"
+    app:whorlview_circle_speed="360"
+    app:whorlview_parallax="fast"
+    app:whorlview_strokeWidth="3"
+    app:whorlview_sweepAngle="100" />

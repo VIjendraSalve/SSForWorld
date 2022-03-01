@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/five"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/apptheme"
+                app:cardCornerRadius="@dimen/five"
+                app:cardElevation="@dimen/five"
+                app:cardUseCompatPadding="true"
+                tools:style="@style/CardView"
+                tools:ignore="PrivateResource">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ten"
+                    android:orientation="vertical">
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Council Related Enquiry"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sixteen" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/five"
+                        android:orientation="horizontal">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Name : "
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/twelve" />
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:text="Dr. Ajay Bhandarkar"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/twelve" />
+
+                    </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/five">
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Post : "
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/twelve" />
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Hon. Secretary"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/twelve" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/five"
+                            android:orientation="horizontal">
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mobile No : "
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/twelve" />
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="9825300222"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/twelve" />
+
+                        </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/five"
+                        android:orientation="horizontal">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Email id  : "
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/twelve" />
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:text="abhandarkar63@gmail.com"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/twelve" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/five"
+                        android:orientation="horizontal">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Address : "
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/twelve" />
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:text="15, Vishwas Colony, Behind, RC Dutt Rd, Alkapuri, Vadodara"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/twelve" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/apptheme"
+                app:cardCornerRadius="@dimen/five"
+                app:cardElevation="@dimen/five"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ten"
+                    android:orientation="vertical">
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Website Related Enquiry"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sixteen" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/five"
+                        android:orientation="horizontal">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Name : "
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/twelve" />
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:text="Dr. Abhay Mahajan"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/twelve" />
+
+                    </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/five"
+                            >
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Post : "
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/twelve" />
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Council Member"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/twelve" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/five"
+                            android:orientation="horizontal">
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mobile No : "
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/twelve" />
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="09822321224"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/twelve" />
+
+                        </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/five"
+                        android:orientation="horizontal">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Email id  : "
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/twelve" />
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:text="drabhaymahajan@gmail.com"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/twelve" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/five"
+                        android:orientation="horizontal">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Address : "
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/twelve" />
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:text="1, Vishal Nagar, Gajanan Mandir Road, Opp. CADA Office, Aurangabad"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/twelve" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

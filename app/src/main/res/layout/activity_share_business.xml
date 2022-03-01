@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Activities.Activity_share_business">
+
+    <include layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="10dp"
+        >
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="@dimen/five"
+            android:rotation="0"
+            app:cardElevation="@dimen/five"
+            app:cardMaxElevation="@dimen/five"
+            app:cardUseCompatPadding="true">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/background_visit"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_banner"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/fifteen"
+                         />
+
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginBottom="@dimen/ten"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ten"
+                        android:layout_weight="5"
+                        android:orientation="horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            android:background="@drawable/vis_name"
+                            android:layout_marginLeft="@dimen/ten"/>
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                            android:id="@+id/tv_user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text="Vijendra Salve"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:textStyle="normal"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/five"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/vis_email"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:layout_marginLeft="@dimen/ten"/>
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                            android:id="@+id/tv_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:gravity="left"
+                            android:text="vijendrasalve@gmail.com"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/five"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/vis_phone"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:layout_marginLeft="@dimen/ten"/>
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                            android:id="@+id/tv_mobile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:gravity="left"
+                            android:text="8956535974"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/five"
+                        android:layout_marginBottom="@dimen/ten"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/vis_location"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:layout_marginLeft="@dimen/ten"/>
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                            android:id="@+id/tv_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:gravity="left"
+                            android:text="MIDC, Nashik"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/imageView2"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/cardview"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/five"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

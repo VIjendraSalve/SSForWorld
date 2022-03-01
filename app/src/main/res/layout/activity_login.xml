@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layout_centerInParent="true"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="260dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/nested"
+        android:layout_marginBottom="@dimen/twenty"
+        android:layout_centerInParent="true"
+        android:src="@drawable/imageedit_logo_new" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="1dp"
+                app:cardUseCompatPadding="true">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/ten"
+                    android:orientation="vertical">
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                        android:id="@+id/tvLogin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Login"
+                        android:layout_above="@+id/txt_user_name"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:layout_marginBottom="@dimen/ten"
+                        android:textSize="@dimen/twentyfive"
+                        android:textColor="@color/apptheme"
+                        android:textStyle="bold"/>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txt_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ten"
+                        android:clipChildren="false"
+                        android:layout_below="@+id/tvLogin"
+                        android:hint="Enter User Mobile Number"
+                        android:theme="@style/TextLabelSNA"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:layout_marginRight="@dimen/ten"
+                        android:textColorHint="@color/colorGray"
+                        android:layout_marginBottom="@dimen/five"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_username"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_phone_android_black_24dp"
+                            android:drawableTint="@color/grey_1"
+                            android:drawablePadding="@dimen/ten"
+                            android:ems="10"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:text="8956535974"
+                            android:padding="@dimen/ten"
+                            android:textColor="#0A0B12"
+                            android:translationY="3dp"
+                            android:layout_marginBottom="@dimen/five"
+                            android:background="@drawable/edittext_background"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txt_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipChildren="false"
+                        android:theme="@style/TextLabelSNA"
+                        app:passwordToggleDrawable="@drawable/show_password_selector"
+                        app:passwordToggleEnabled="true"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:layout_marginTop="@dimen/ten"
+                        android:layout_marginRight="@dimen/ten"
+                        android:layout_below="@id/txt_username"
+                        android:textColorHint="@color/colorGray"
+                        android:hint="Password"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_background"
+                            android:ems="10"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:textColor="#0A0B12"
+                            android:text="123456"
+                            android:padding="@dimen/ten"
+                            android:translationY="3dp"
+                            android:layout_marginBottom="@dimen/five"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <!--  <com.windhans.client.forworld.my_library.PasswordEditText
+                          android:id="@+id/et_password"
+                          android:layout_width="match_parent"
+                          android:layout_height="45dp"
+                          android:layout_below="@id/et_username"
+                          android:layout_marginLeft="@dimen/ten"
+                          android:layout_marginTop="@dimen/ten"
+                          android:layout_marginRight="@dimen/ten"
+                          android:background="@drawable/edittext_background"
+                          android:drawableLeft="@drawable/ic_lock_open_black_24dp"
+                          android:drawablePadding="@dimen/fifteen"
+                          android:hint="Password"
+                          android:imeOptions="actionDone"
+                          android:paddingLeft="@dimen/fifteen"
+                          android:paddingRight="@dimen/fifteen"
+                          android:singleLine="true"
+                          android:textSize="16sp" />-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_input"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/five"
+                        android:weightSum="2">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                            android:id="@+id/tv_forgotPass"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:layout_marginTop="@dimen/twenty"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="Forgot Password?"
+                            android:textColor="@color/apptheme"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                            android:id="@+id/tv_registration"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/twenty"
+                            android:layout_marginRight="@dimen/fifteen"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="Sign Up"
+                            android:textColor="@color/apptheme"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+
+                            />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btn_sign_in"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/cardView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-30dp"
+                android:background="@drawable/rounded"
+                android:baselineAlignBottom="true" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

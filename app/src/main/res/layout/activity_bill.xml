@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Activities.BillActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/five"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_marginRight="@dimen/five"
+        android:orientation="vertical"
+        android:padding="@dimen/three">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:id="@+id/tv_vendor_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kanihaya Market"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fourteen" />
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:id="@+id/tv_vendor_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/two"
+                    android:text="9999999999"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/twelve" />
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:id="@+id/tv_vendor_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trimurti Chowk, Nashik"
+                    android:textColor="@color/black"
+                    android:maxLines="1"
+                    android:textSize="@dimen/twelve" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vijendra Salve"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fourteen" />
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:id="@+id/tv_user_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/two"
+                    android:text="8956535974"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/twelve" />
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:id="@+id/tv_user_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/two"
+                    android:text="A-7, Uttam Nagar, Nashik"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/twelve" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/apptheme"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/three"
+                android:paddingBottom="@dimen/three"
+                android:weightSum="10">
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="@string/srno"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fourteen" />
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:gravity="center"
+                    android:text="@string/product"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fourteen" />
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="@string/quantity"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fourteen" />
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="@string/amount"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fourteen" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_product_details"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="@dimen/three" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/five"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/five"
+                android:background="@color/grey_1" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/apptheme"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/three"
+                android:paddingBottom="@dimen/three"
+                android:weightSum="2">
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="@dimen/ten"
+                    android:text="@string/totalamount"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fourteen" />
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:id="@+id/tv_total_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingLeft="@dimen/ten"
+                    android:paddingRight="@dimen/ten"
+                    android:text="500"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fourteen" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/five"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/three"
+                android:paddingBottom="@dimen/three"
+                android:weightSum="2">
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/ten"
+                    android:text="@string/amount_deducted_from_wallet"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/twelve" />
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:id="@+id/tv_amt_from_wallet"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingLeft="@dimen/ten"
+                    android:paddingRight="@dimen/ten"
+                    android:text="50"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fourteen" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/three"
+                android:paddingBottom="@dimen/three"
+                android:weightSum="2">
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/ten"
+                    android:text="@string/remanining_amount_paid_via"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/twelve" />
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:id="@+id/tv_remaining_amount_paid_type"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingLeft="@dimen/ten"
+                    android:paddingRight="@dimen/ten"
+                    android:text="Cash"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fourteen" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/three"
+                android:paddingBottom="@dimen/three"
+                android:weightSum="2">
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/ten"
+                    android:text="@string/remamt"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/twelve" />
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:id="@+id/tv_remaining_amount_by_user"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingLeft="@dimen/ten"
+                    android:paddingRight="@dimen/ten"
+                    android:text="450"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fourteen" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

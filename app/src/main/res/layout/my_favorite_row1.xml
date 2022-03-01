@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+  >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/five"
+        app:cardMaxElevation="@dimen/five"
+        android:padding="@dimen/five"
+        android:layout_margin="@dimen/two"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5"
+           >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:padding="@dimen/five">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside" />
+
+                <ImageView
+                    android:id="@+id/image_like"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/five"
+                    android:layout_marginTop="@dimen/ten"
+                    android:background="@drawable/unlike"
+                    android:visibility="gone"
+
+
+                    />
+
+
+            </RelativeLayout>
+         <!--   <ImageView
+                android:id="@+id/image"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/no"
+                android:layout_weight="1.5"/>
+-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="3.5"
+                android:layout_marginTop="@dimen/five"
+                android:layout_marginLeft="@dimen/five"
+                android:padding="@dimen/five">
+             <!--   <ImageView
+                    android:id="@+id/image_like"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/five"
+                    android:layout_marginTop="@dimen/ten"
+                    android:background="@drawable/unlike"
+                    android:visibility="visible"
+                    android:layout_gravity="right"
+
+
+                    />-->
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                    android:id="@+id/txt_product_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Product Name"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:id="@+id/txt_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textColor="@color/black"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_marginTop="@dimen/two"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/two"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sold by  : " />
+
+                    <TextView
+                        android:id="@+id/txt_vendor_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Abc"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:layout_marginTop="@dimen/two">
+
+                    <TextView
+                        android:id="@+id/txt_selling_cost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/fifteen"
+                        android:text="899"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:id="@+id/txt_original_cost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="899"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right">
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                        android:id="@+id/txt_remove"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:text="@string/remove"
+                        android:textColor="@color/red_a"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

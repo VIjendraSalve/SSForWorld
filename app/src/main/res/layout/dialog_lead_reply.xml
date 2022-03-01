@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:cardCornerRadius="@dimen/five"
+        app:cardElevation="@dimen/five"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spinner_status"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:entries="@array/Status"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginRight="@dimen/ten"
+                style="@style/Widget.AppCompat.Light.DropDownItem.Spinner"
+                android:background="@drawable/edittext_background"
+                />
+
+
+            <LinearLayout
+                android:id="@+id/ll_completed_module"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+            <EditText
+                android:id="@+id/edt_wallet_amount"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="Enter Wallet Amount to Deduct"
+                android:paddingLeft="@dimen/three"
+                android:text="0"
+                android:inputType="number"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginRight="@dimen/ten"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/fifteen"
+                android:text="Select Remaining Payment Mode"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginLeft="@dimen/ten"/>
+
+            <Spinner
+                android:id="@+id/spinner_remaining_amount"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:entries="@array/PaymentMode"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginRight="@dimen/ten"
+
+                style="@style/Widget.AppCompat.Light.DropDownItem.Spinner"
+                android:background="@drawable/edittext_background"
+                />
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginRight="@dimen/ten"
+                android:textColorHint="#c5c5c5">
+
+                <EditText
+                    android:id="@+id/edt_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@drawable/edittextround"
+                    android:gravity="start"
+                    android:hint="Enter message"
+                    android:imeOptions="normal"
+                    android:inputType="text|textMultiLine|textCapSentences"
+                    android:maxLength="1000"
+                    android:paddingLeft="@dimen/five"
+                    android:paddingTop="@dimen/ten"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/apptheme"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+
+                android:id="@+id/btn_send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/twenty"
+                android:background="@color/apptheme"
+                android:text="Send"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

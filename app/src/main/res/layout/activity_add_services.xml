@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:layout_above="@+id/ll_button"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_margin="@dimen/ten"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_event_image_upload"
+                android:layout_width="93dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/no_image_available"
+                android:layout_weight="5" />
+
+            <Button
+                android:id="@+id/ll_upload_image_service"
+                android:layout_width="160dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/ten"
+                android:layout_weight="5"
+                android:background="@color/apptheme"
+                android:text="@string/chooseimage"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+
+            <Spinner
+                android:id="@+id/business_services_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="@dimen/ten"
+                android:layout_marginEnd="@dimen/ten"
+                android:textColorHint="#c5c5c5"
+                android:focusable="false"
+                android:clickable="false"
+                android:background="@drawable/edittext_background"
+                android:padding="10dp"
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                />
+            <Spinner
+                android:id="@+id/business_services_subspinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ten"
+                android:layout_marginEnd="@dimen/ten"
+                android:textColorHint="#c5c5c5"
+                android:padding="10dp"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="@dimen/ten"
+                android:visibility="gone"
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                />
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginRight="@dimen/five"
+                android:hint="Enter  Name"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_serviceName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="@string/servicename"
+                    android:drawablePadding="@dimen/five"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:padding="@dimen/ten"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:theme="@style/MyEditTextTheme"
+
+                    android:background="@drawable/edittext_background"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginRight="@dimen/five"
+                android:hint="Enter Description"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_serviceDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="@string/desc"
+                    android:drawablePadding="@dimen/five"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:padding="@dimen/ten"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:theme="@style/MyEditTextTheme"
+
+                    android:background="@drawable/edittext_background"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardBackgroundColor="@color/apptheme"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="2dp"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginTop="@dimen/five"
+                        android:gravity="center"
+                        android:text="@string/selectimage"
+                        android:textColor="@color/white"
+                        android:textColorHighlight="#000000"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/five"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/ten"
+                        android:paddingLeft="@dimen/five"
+                        android:paddingRight="@dimen/five"
+                        android:paddingTop="@dimen/ten">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_service_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:minHeight="@dimen/fifty" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            app:backgroundTint="@color/apptheme"
+                            android:id="@+id/iv_add_service_images"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_gravity="center"
+                            android:textAllCaps="false"
+                            android:paddingLeft="@dimen/ten"
+                            android:paddingRight="@dimen/ten"
+                            android:textColor="@color/white"
+                            android:text="@string/addimage"
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_alignParentBottom="true"
+
+        >
+
+        <Button
+            android:id="@+id/btn_addProduct"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/apptheme"
+            android:text="@string/submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/twenty"
+            android:layout_weight="2"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

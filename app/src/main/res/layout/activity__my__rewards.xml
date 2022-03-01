@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Activity_My_Rewards"
+
+
+    >
+
+    <include layout="@layout/toolbar"></include>
+
+    <LinearLayout
+        android:id="@+id/ll_offers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/ten"
+
+        >
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="170dp"
+            android:layout_height="180dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/five"
+            app:cardElevation="@dimen/five"
+            app:cardMaxElevation="@dimen/five"
+            app:cardUseCompatPadding="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/five">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="@dimen/ten"
+                    android:background="@drawable/giftbox">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/ten"
+                    android:gravity="center"
+                    android:text="Cashback Won"
+                    android:textColor="@color/black">
+
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="@dimen/five"
+                        android:background="@drawable/rupee_indian_black"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"></TextView>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="170dp"
+            android:layout_height="180dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/five"
+            app:cardElevation="@dimen/five"
+            app:cardMaxElevation="@dimen/five"
+            android:padding="@dimen/forty"
+            app:cardUseCompatPadding="true">
+
+            <com.cooltechworks.views.ScratchImageView
+                android:id="@+id/sample_image"
+                android:layout_width="170dp"
+                android:layout_height="180dp"
+                android:src="@drawable/giftbox"
+                android:padding="@dimen/forty"
+                android:text="@string/scan_barcode">
+
+
+            </com.cooltechworks.views.ScratchImageView>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

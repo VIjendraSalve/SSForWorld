@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/ten"
+            android:layout_marginTop="@dimen/ten"
+            android:layout_weight="1.7"
+            android:weightSum="10"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="right"
+                android:paddingRight="@dimen/seven"
+                android:layout_weight="9">
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                    android:id="@+id/textView_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="June"
+                    android:textColor="@color/apptheme"
+                    android:textSize="@dimen/twenty"
+                    android:textStyle="bold" />
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                    android:id="@+id/textView_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="20"
+                    android:textColor="@color/apptheme"
+                    android:textSize="@dimen/twenty"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/two"
+                android:layout_weight="1">
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="50dp"
+                    android:background="@color/cardview_dark_background"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/five"
+            android:layout_weight="8.3"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_pickup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="@color/apptheme"
+                app:cardCornerRadius="@dimen/seven"
+                app:cardElevation="@dimen/five"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/five">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/message"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/twelve" />
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                                android:id="@+id/text_laedReason"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/three"
+                                android:text="MB123456789"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/fourteen"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/seven"
+                        android:orientation="vertical">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/status"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/twelve" />
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                            android:id="@+id/textView_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/three"
+                            android:text="Pending"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/fourteen" />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_above="@+id/ll_total_amt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nested"
+        android:scrollbars="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_enquiry_product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:scrollbars="vertical" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <include layout="@layout/progress_endless" />
+
+    <include layout="@layout/no_record_layout" />
+
+    <include layout="@layout/no_internet_connection" />
+
+    <include layout="@layout/progress_bar" />
+
+    <LinearLayout
+        android:id="@+id/ll_total_amt"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:weightSum="2"
+        android:padding="@dimen/five">
+
+        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:layout_height="match_parent"
+            android:textColor="@color/apptheme"
+            android:textStyle="bold"
+            android:paddingLeft="@dimen/ten"
+            android:textSize="@dimen/seventeen"
+            android:text="Total Amount : "
+            android:gravity="center_vertical"
+            android:layout_gravity="right"/>
+
+        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+            android:id="@+id/tv_total_amount"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="match_parent"
+            android:textColor="@color/apptheme"
+            android:textStyle="bold"
+            android:textSize="@dimen/seventeen"
+            android:layout_gravity="right"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

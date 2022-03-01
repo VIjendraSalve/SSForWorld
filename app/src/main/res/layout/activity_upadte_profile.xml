@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.ProfileActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/ten"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp"
+                tools:ignore="VectorDrawableCompat"
+                android:visibility="gone"/>
+
+            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Personal_Details"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/fifteen"
+                android:layout_margin="@dimen/five"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/twenty"
+                app:cardElevation="@dimen/three"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/five"
+                        android:weightSum="2">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/Member_No"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/txt_member_no"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="1"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/five"
+                        android:weightSum="2">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/Name"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/txt_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/five"
+                        android:weightSum="2">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/Contact_Number"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/txt_contact_number"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/five"
+                        android:weightSum="2">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/Email"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/txt_email_id"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/five"
+                        android:weightSum="2">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                            android:id="@+id/txt_address"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/Address1"
+                            android:textColor="@color/black"
+                            android:visibility="visible"/>
+
+                        <EditText
+                            android:id="@+id/txt_address1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/five"
+                        android:weightSum="2">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                            android:id="@+id/txt_Address"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/Address1"
+                            android:textColor="@color/black"
+                            android:visibility="visible"/>
+
+                        <EditText
+                            android:id="@+id/txt_address2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/five"
+                        android:weightSum="2">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                            android:id="@+id/txt_city1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/City"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/txt_city"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:visibility="visible"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/five"
+                        android:weightSum="2">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                            android:id="@+id/txt_state1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/State"
+                            android:textColor="@color/black"
+                            android:visibility="visible"/>
+
+                        <EditText
+                            android:id="@+id/txt_state"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:visibility="visible"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/five"
+                        android:visibility="gone"
+                        android:weightSum="2">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/Country"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/txt_country"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Professional_Details"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/fifteen"
+                android:layout_margin="@dimen/five"
+                android:visibility="gone"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/twenty"
+                app:cardElevation="@dimen/three"
+                app:cardUseCompatPadding="true"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/five"
+                        android:weightSum="2">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                            android:id="@+id/txt_zone"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/ZoneName"
+                            android:textColor="@color/black"
+                            android:visibility="visible"/>
+
+                        <EditText
+                            android:id="@+id/txt_zoneName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:visibility="visible"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/five"
+                        android:weightSum="2">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                            android:id="@+id/txt_member"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/Member_type"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/txt_membership_type"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="1"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/five"
+                        android:weightSum="2">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                            android:id="@+id/txt_spec"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/specialization"
+                            android:textColor="@color/black"
+                            android:visibility="visible"/>
+
+                        <EditText
+                            android:id="@+id/txt_specialization"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="MD Ortho"
+                            android:textColor="@color/black"
+                            android:visibility="visible"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+          <Button
+              android:id="@+id/btn_update"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Upadate"
+              android:textColor="@color/white"
+              android:textStyle="normal"
+              android:textSize="18sp"
+              android:background="@color/apptheme"
+              android:layout_margin="5dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

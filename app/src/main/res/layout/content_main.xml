@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main"
+    >
+  <!---->
+
+  <FrameLayout
+      android:id="@+id/frameLayout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_above="@id/tv_marquee"
+      />
+
+  <TextView
+      android:id="@+id/tv_marquee"
+      android:layout_width="match_parent"
+      android:layout_height="45dp"
+      android:layout_alignParentRight="true"
+      android:gravity="center_vertical"
+      android:singleLine="true"
+      android:ellipsize="marquee"
+      android:layout_alignParentBottom="true"
+      android:fadingEdge="horizontal"
+      android:marqueeRepeatLimit="marquee_forever"
+      android:scrollHorizontally="true"
+      android:focusable="true"
+      android:focusableInTouchMode="true"
+      android:textColor="@color/white"
+      android:visibility="gone"
+      android:background="@color/apptheme"
+      />
+
+  <!--
+      <com.sunfusheng.marqueeview.MarqueeView
+          android:id="@+id/marqueeView"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_alignParentBottom="true"
+          android:background="@color/apptheme"
+          app:mvAnimDuration="1000"
+          app:mvInterval="3000"
+          app:mvTextColor="@color/white"
+          app:mvTextSize="14sp"
+          app:mvSingleLine="true"/>
+  -->
+
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/fab"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentRight="true"
+      android:layout_marginBottom="@dimen/sixty"
+      android:layout_marginRight="@dimen/twentyfive"
+      android:src="@android:drawable/ic_dialog_email"
+      android:visibility="gone"
+      app:behavior_autoHide="false"
+      app:elevation="6dp"
+      app:pressedTranslationZ="12dp" />
+
+
+</RelativeLayout>

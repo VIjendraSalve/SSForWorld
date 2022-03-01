@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/search_home"
+        android:icon="@drawable/search_icon"
+        android:orderInCategory="100"
+        android:title="Search"
+        android:visible="false"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/home"
+        android:title="Home"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_cart"
+        android:icon="@drawable/cart_item"
+        android:title="Cart"
+        app:actionLayout="@layout/custom_action_item_layout"
+        app:showAsAction="always" />
+
+
+</menu>

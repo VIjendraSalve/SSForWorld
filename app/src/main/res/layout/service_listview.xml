@@ -1,0 +1,173 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        tools:style="@style/CardView"
+        tools:ignore="PrivateResource">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="vertical">
+
+
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+
+                />
+            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                android:id="@+id/txt_BuisnessTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/three"
+                android:layout_marginTop="@dimen/three"
+                android:text="BuisnessTitle"
+                android:textColor="@color/apptheme"
+                android:textSize="17sp"
+                android:textStyle="normal" />
+
+            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/details"
+                android:textSize="@dimen/twelve"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginRight="@dimen/five"
+                android:layout_marginTop="@dimen/three">
+
+            </com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular>
+
+            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                android:id="@+id/txt_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginRight="@dimen/five"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@string/desc"
+                android:textColor="@color/apptheme"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/three"
+                android:layout_marginLeft="@dimen/five"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/BusinessName"
+                            android:textSize="@dimen/twelve" />
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                            android:id="@+id/tv_businessName"
+                            android:layout_marginTop="@dimen/three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/apptheme"
+                            android:textSize="@dimen/fifteen"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mobile"
+                            android:textSize="@dimen/twelve"/>
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                            android:id="@+id/tv_businessMobile"
+                            android:layout_marginTop="@dimen/three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/apptheme"
+                            android:textSize="@dimen/fifteen"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_marginRight="@dimen/five"
+                android:layout_weight="10"
+                android:orientation="horizontal"
+                >
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:id="@+id/txt_location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/three"
+                    android:layout_weight="6"
+                    android:text="@string/location"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_add_enquiry"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/three"
+                android:layout_marginBottom="@dimen/five"
+                android:background="@color/apptheme"
+                android:paddingLeft="@dimen/twenty"
+                android:paddingRight="@dimen/twenty"
+                android:text="@string/enquiry"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

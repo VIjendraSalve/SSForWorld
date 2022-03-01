@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:background="@color/white"
+
+    >
+    <include layout="@layout/toolbar"/>
+    <ImageView
+        android:id="@+id/iv_banner"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="@dimen/twenty"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/newapplogo"
+        android:layout_gravity="center"/>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/twenty"
+        android:layout_marginRight="@dimen/twenty"
+        android:paddingBottom="@dimen/twenty"
+        app:cardCornerRadius="@dimen/ten"
+        app:cardElevation="@dimen/four"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@android:color/white"
+        tools:style="@style/CardView"
+        tools:ignore="PrivateResource"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/twenty"
+
+            android:padding="@dimen/ten">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_feedback_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_title"
+                    android:imeOptions="actionNext"
+                    android:text=""
+                    android:inputType="textMultiLine"
+                    android:padding="10sp"
+                    android:textSize="15sp"
+                    android:paddingBottom="@dimen/five"
+                    android:background="@drawable/black_border"
+                    android:layout_marginTop="@dimen/thirty"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twenty"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_feedback_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:hint="@string/enter_desc"
+                    android:gravity="start"
+                    android:ellipsize="start"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine"
+                    android:text=""
+                    android:background="@drawable/black_border"
+                    android:padding="10sp"
+                    android:textSize="15sp"
+                    android:paddingBottom="@dimen/five"
+                    android:layout_marginTop="@dimen/thirty"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/btn_sumbit_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/ten"
+                android:gravity="center"
+                android:text="submit"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:layout_marginBottom="@dimen/ten"
+                android:background="@color/apptheme"
+                android:textSize="17dp"/>
+
+
+
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

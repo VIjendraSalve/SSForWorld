@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/three">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/three"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/five"
+        app:cardElevation="@dimen/five"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:padding="@dimen/ten"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                    android:id="@+id/tv_vendor_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Star Mobile"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/sixteen" />
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:id="@+id/tv_vendor_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:text="Nashik"
+                    android:textColor="@color/pin_normal"
+                    android:textSize="@dimen/fourteen" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/ten"
+                android:orientation="horizontal"
+
+                >
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                    android:id="@+id/tv_product_selling_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7000"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/eighteen" />
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:id="@+id/tv_product_original_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:text="7000"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/thirteen" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_offer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginRight="@dimen/ten"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/offername"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/ten"/>
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                            android:id="@+id/tv_offer_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/offername"
+                            android:textColor="@color/apptheme"
+                            android:textSize="@dimen/sixteen"/>
+                        
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/validity"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/ten"/>
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                            android:id="@+id/tv_offer_validity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/offername"
+                            android:textColor="@color/apptheme"
+                            android:textSize="@dimen/sixteen"/>
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/five"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/offercode"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/ten"/>
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                            android:id="@+id/tv_offer_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/offername"
+                            android:textColor="@color/apptheme"
+                            android:textSize="@dimen/sixteen"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/offerLimitCount"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/ten"/>
+
+                        <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                            android:id="@+id/tv_offer_redemption_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/offername"
+                            android:textColor="@color/apptheme"
+                            android:textSize="@dimen/sixteen"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/three"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_buy_now"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:textSize="@dimen/twelve"
+                    android:background="@color/apptheme"
+                    android:paddingLeft="@dimen/ten"
+                    android:paddingRight="@dimen/ten"
+                    android:text="@string/buy_now"
+                    android:visibility="gone"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_add_to_cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="@dimen/five"
+                    android:background="@color/apptheme"
+
+                    android:text="@string/addtocart"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/twelve" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

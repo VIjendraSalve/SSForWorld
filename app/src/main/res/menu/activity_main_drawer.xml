@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="always">
+
+    <!-- <item
+         android:id="@+id/nav_member_area"
+         android:icon="@drawable/nav_usiwscouncil"
+         android:title="Members Area"
+
+         />-->
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/user_drawer"
+        android:title="@string/Profile" />
+
+    <item
+        android:id="@+id/nav_language"
+        android:icon="@drawable/chooselanguage"
+        android:title="@string/select_language" />
+
+    <item
+        android:id="@+id/nav_referrals"
+        android:icon="@drawable/wallet_drawer"
+        android:title="@string/mywallet" />
+
+    <item
+        android:id="@+id/nav_Share"
+        android:icon="@drawable/sharedrawer"
+        android:title="@string/share" />
+
+    <!--<item
+        android:id="@+id/nav_bill"
+        android:icon="@drawable/sharedrawer"
+        android:title="@string/bill" />-->
+
+    <group
+        android:id="@+id/member_grp"
+        android:checkableBehavior="single"
+        android:enabled="true"
+        android:visible="false">
+
+        <!--  <item
+              android:id="@+id/nav_demo"
+              android:title=" Demo"
+              android:icon="@drawable/prodects"
+              android:visible="false"/>-->
+        <item
+            android:id="@+id/nav_card_share"
+            android:icon="@drawable/visitingcard_drawer"
+            android:title="@string/digitalvistingCard" />
+        <!-- <item
+             android:id="@+id/nav_customer_enquiry"
+             android:title=" Customer Enquiry"
+             android:icon="@drawable/prodects"
+             android:visible="false"/>-->
+        <item
+            android:id="@+id/nav_myProduct"
+            android:icon="@drawable/product_drawer"
+            android:title="@string/myproduct" />
+
+        <item
+            android:id="@+id/nav_myService"
+            android:icon="@drawable/services_drawer"
+            android:title="@string/myservice" />
+
+        <item
+            android:id="@+id/nav_myOrders"
+            android:icon="@drawable/order_drawer"
+            android:title="@string/completedorders" />
+
+        <item
+            android:id="@+id/nav_offer_creation"
+            android:icon="@drawable/offer_drawer"
+            android:title="@string/offerCreation" />
+
+        <item
+            android:id="@+id/nav_offer_listing"
+            android:icon="@drawable/offer_drawer"
+            android:title="@string/offers" />
+
+      <!--  <item
+            android:id="@+id/nav_campaign"
+            android:icon="@drawable/businessprofile"
+            android:visible="false"
+            android:enabled="false"
+            android:title="Campaign" />
+        <item
+            android:id="@+id/nav_Add"
+            android:icon="@drawable/rewords"
+            android:title=" Advertising"
+            android:enabled="false"
+            android:visible="false" />-->
+        <item
+            android:id="@+id/nav_business_profile"
+            android:icon="@drawable/user_drawer"
+            android:title="@string/businessprofile" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/feedback_drawer"
+            android:title="@string/Feedback" />
+
+        <item
+            android:id="@+id/nav_ChangePassword"
+            android:icon="@drawable/password_drawer"
+            android:title="@string/changepassword" />
+
+        <item
+            android:id="@+id/nav_reward"
+            android:icon="@drawable/like_drawer"
+            android:title="Reward" />
+
+        <!--  <item
+              android:id="@+id/nav_details"
+              android:icon="@drawable/change_password"
+              android:title="Details" />
+
+          <item
+              android:id="@+id/nav_Add"
+              android:icon="@drawable/ic_feedback_black_24dp"
+              android:title="Add" />-->
+        <!--<item
+            android:id="@+id/nav_buildVersion"
+            android:icon="@drawable/ic_feedback_black_24dp"
+            android:title="@string/version" />-->
+    </group>
+
+    <group
+        android:id="@+id/member_grp1"
+        android:checkableBehavior="single"
+        android:enabled="true"
+        android:visible="false">
+        <!--<item
+            android:id="@+id/nav_MyBalance"
+            android:icon="@drawable/wallet_drawer"
+            android:title="@string/mybalance" />-->
+
+       <!-- <item
+            android:id="@+id/nav_reward"
+            android:icon="@drawable/gift_box"
+            android:title="@string/myrewards_offers" />-->
+
+        <item
+            android:id="@+id/nav_enquiry"
+            android:icon="@drawable/enquiry_drawer"
+            android:title="@string/myenquiry" />
+
+        <item
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/cart_drawer"
+            android:title="@string/mycart" />
+
+        <item
+        android:id="@+id/nav_favorite"
+        android:icon="@drawable/like_drawer"
+        android:title="@string/myfavorite" />
+
+
+
+
+
+      <!--  <item
+            android:id="@+id/Setting"
+            android:icon="@drawable/setting"
+            android:title="@string/setting" />-->
+
+
+
+    </group>
+    <group
+        android:id="@+id/my_events_nav_drawer"
+        android:checkableBehavior="single"
+        android:enabled="true">
+
+
+    </group>
+
+    <group
+        android:id="@+id/my_events_nav_drawer1"
+        android:checkableBehavior="single"
+        android:enabled="true">
+
+        <item
+            android:id="@+id/nav_login"
+            android:icon="@drawable/ic_feedback_black_24dp"
+            android:title="@string/login" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout_drawer"
+            android:title="@string/logout" />
+
+        <!--  <item
+              android:id="@+id/nav_contact_us"
+              android:icon="@drawable/nav_aboutus"
+              android:title="Contact Us" />
+          <item
+              android:id="@+id/nav_about_us"
+              android:icon="@drawable/nav_aboutus"
+              android:title="About Us" />-->
+    </group>
+
+</menu>

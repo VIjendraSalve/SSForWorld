@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    >
+
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/ll_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="7dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@id/btn_share">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:scrollbars="vertical" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+    </LinearLayout>
+    <include layout="@layout/progress_endless" />
+
+    <include layout="@layout/no_record_layout" />
+
+    <include layout="@layout/no_internet_connection" />
+
+    <include layout="@layout/progress_bar" />
+
+    <Button
+        android:id="@+id/btn_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/share"
+        android:layout_alignParentBottom="true"
+        android:background="@color/apptheme"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        />
+
+</RelativeLayout>

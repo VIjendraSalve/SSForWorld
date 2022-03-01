@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include layout="@layout/toolbar"/>
+    <LinearLayout
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/five"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_marginRight="@dimen/five"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_Name"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="@dimen/ten"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_regiter"
+                android:hint="@string/name"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:padding="@dimen/seven"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="@dimen/ten"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_regiter"
+                android:hint="@string/mobile"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="10"
+                android:padding="@dimen/seven"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_Address"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="@dimen/ten"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_regiter"
+                android:hint="@string/Address1"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:padding="@dimen/seven"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_city"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="@dimen/ten"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_regiter"
+                android:hint="@string/City"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:padding="@dimen/seven"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginTop="@dimen/ten"
+            android:layout_marginRight="@dimen/ten"
+            android:textColorHint="#c5c5c5">
+
+            <EditText
+                android:id="@+id/edt_purpose"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/button_regiter"
+                android:gravity="start"
+                android:hint="@string/purpose"
+                android:imeOptions="actionDone"
+                android:inputType="text|textMultiLine|textCapSentences"
+                android:maxLength="1000"
+                android:paddingLeft="@dimen/five"
+                android:paddingTop="@dimen/ten"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Spinner
+            android:id="@+id/category_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginTop="@dimen/twenty"
+            android:layout_marginRight="@dimen/ten"
+            android:padding="20dp"
+            android:textColorHint="#c5c5c5"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/apptheme"
+            android:inputType="textCapWords"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <!--<include layout="@layout/progress_endless" />-->
+
+    <!--<include layout="@layout/no_record_layout" />-->
+
+    <include layout="@layout/no_internet_connection" />
+
+    <!-- <include layout="@layout/progress_bar" />-->
+</RelativeLayout>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        tools:style="@style/CardView"
+        tools:ignore="PrivateResource">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/five"
+                android:layout_marginLeft="@dimen/three"
+                android:layout_marginRight="@dimen/three"
+                android:layout_marginTop="@dimen/five"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:orientation="vertical">
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                        android:id="@+id/tv_year"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginBottom="@dimen/ten"
+                        android:layout_marginTop="@dimen/two"
+                        android:text="Year 2018 - 19"
+                        android:textColor="@color/apptheme"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/twelve" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/five"
+                        android:layout_marginRight="@dimen/five"
+                        android:orientation="horizontal">
+
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4.1"
+                            android:gravity="left"
+                            android:orientation="vertical">
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="President"
+                                android:textColor="@color/grey_1"
+                                android:textSize="@dimen/ten" />
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:id="@+id/tv_president"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/two"
+                                android:text="Vijendra Salve"
+                                android:textColor="@color/apptheme"
+                                android:textSize="@dimen/twelve" />
+
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/three"
+                            android:layout_weight="2.9"
+                            android:gravity="left"
+                            android:orientation="vertical">
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Secretary"
+                                android:textColor="@color/grey_1"
+                                android:textSize="@dimen/ten" />
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:id="@+id/tv_secretory"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/two"
+                                android:text="Director"
+                                android:textColor="@color/apptheme"
+                                android:textSize="@dimen/twelve" />
+
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/three"
+                            android:layout_weight="2.9"
+                            android:gravity="left"
+                            android:orientation="vertical">
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="treasurer"
+                                android:textColor="@color/grey_1"
+                                android:textSize="@dimen/ten" />
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:id="@+id/tv_treasurer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/two"
+                                android:text="Director"
+                                android:textColor="@color/apptheme"
+                                android:textSize="@dimen/twelve" />
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ten"
+                        android:layout_marginLeft="@dimen/five"
+                        android:layout_marginRight="@dimen/five"
+                        android:orientation="horizontal">
+
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+
+                            android:gravity="left"
+                            android:orientation="vertical">
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:id="@+id/member"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Member"
+                                android:textColor="@color/grey_1"
+                                android:textSize="@dimen/ten"
+                                android:visibility="visible" />
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:id="@+id/tv_member1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/two"
+                                android:text="Vijendra Salve"
+                                android:textColor="@color/apptheme"
+                                android:textSize="@dimen/twelve"
+                                android:visibility="visible"/>
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:id="@+id/member3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/five"
+                                android:text="Member"
+                                android:textColor="@color/grey_1"
+                                android:textSize="@dimen/ten"
+                                android:visibility="visible"/>
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:id="@+id/tv_member3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/two"
+                                android:text="Vijendra Salve"
+                                android:textColor="@color/apptheme"
+                                android:textSize="@dimen/twelve"
+                                android:visibility="visible"/>
+
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/three"
+                            android:layout_weight="5"
+                            android:gravity="left"
+                            android:orientation="vertical">
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:id="@+id/member2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Member"
+                                android:textColor="@color/grey_1"
+                                android:textSize="@dimen/ten"
+                                android:visibility="visible"/>
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:id="@+id/tv_member2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/two"
+                                android:text="Director"
+                                android:textColor="@color/apptheme"
+                                android:textSize="@dimen/twelve"
+                                android:visibility="visible" />
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:id="@+id/president"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="President"
+                                android:layout_marginTop="@dimen/five"
+                                android:textColor="@color/grey_1"
+                                android:textSize="@dimen/ten"
+                                android:visibility="visible"/>
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:id="@+id/tv_member4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/two"
+                                android:text="Vijendra Salve"
+                                android:textColor="@color/apptheme"
+                                android:textSize="@dimen/twelve"
+                                android:visibility="visible"/>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

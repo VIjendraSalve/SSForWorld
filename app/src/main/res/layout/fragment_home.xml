@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/apptheme"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/ten"
+                android:paddingTop="@dimen/five"
+                android:paddingRight="@dimen/ten"
+                android:paddingBottom="@dimen/five"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:id="@+id/ll_search_view"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="6"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/search_view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/five"
+                        android:hint="@string/search"
+                        android:paddingLeft="@dimen/ten"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:drawableLeft="@drawable/ic_search_black_24dp"
+                        android:background="@drawable/edittext_background"
+                        android:queryHint="Search"
+                        android:visibility="visible" />
+                </LinearLayout>
+                <!--    <com.ferfalk.simplesearchview.SimpleSearchView
+                        android:id="@+id/searchView"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_weight="7"/>-->
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/spinner_district"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/edittext_background"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/imgSliderLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                />
+            <!-- <android.support.v4.widget.SwipeRefreshLayout
+                 android:id="@+id/refresh"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/ll_search"
+                 android:scrollbars="vertical">-->
+
+            <!--   <android.support.v7.widget.CardView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   app:cardBackgroundColor="@color/white"
+                   app:cardCornerRadius="@dimen/five"
+                   app:cardElevation="@dimen/ten"
+                   app:cardMaxElevation="@dimen/ten"
+                   android:layout_marginBottom="@dimen/ten">-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/ten"
+                    android:background="@drawable/gradient_back"
+                    android:padding="@dimen/five"
+                    android:text="@string/category"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold">
+
+                </com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_subcateory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <!-- </android.support.v7.widget.CardView>-->
+
+
+            <!-- </android.support.v4.widget.SwipeRefreshLayout>-->
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/imgSliderLayout"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginBottom="@dimen/ten" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_services"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/five"
+                app:cardElevation="@dimen/five"
+                app:cardMaxElevation="@dimen/five"
+                app:cardUseCompatPadding="false">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_business_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+                    >
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                        android:id="@+id/tv_business_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/five"
+                        android:background="@drawable/gradient_back"
+                        android:padding="@dimen/five"
+                        android:text="@string/business"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+
+                    </com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view_business"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="@dimen/five"
+                        android:scrollbars="vertical" />
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                        android:id="@+id/btn_view_more_business"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginBottom="@dimen/five"
+                        android:gravity="right"
+                        android:padding="@dimen/five"
+                        android:text="@string/viewmorebusiness"
+                        android:textColor="@color/apptheme"
+                        android:textSize="10sp"
+
+
+                        >
+
+                    </com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/imgSliderLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="190dp" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/five"
+                app:cardElevation="@dimen/five"
+                app:cardMaxElevation="@dimen/five"
+                app:cardUseCompatPadding="true"
+
+                >
+
+                <LinearLayout
+                    android:id="@+id/ll_product_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:orientation="vertical"
+
+
+                    >
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient_back"
+                        android:padding="@dimen/five"
+                        android:text="@string/product"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"></com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="@dimen/five"
+                        android:layout_marginBottom="@dimen/five"
+                        android:scrollbars="vertical" />
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                        android:id="@+id/btn_view_more"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginBottom="@dimen/five"
+                        android:background="@color/white"
+                        android:gravity="right"
+                        android:padding="@dimen/five"
+                        android:text="@string/view_all_product"
+                        android:textAllCaps="false"
+                        android:textColor="@color/apptheme"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+
+
+                        >
+
+                    </com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular>
+                    <!--    android:background="@drawable/rounded_shape"-->
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <include layout="@layout/progress_endless" />
+
+    <include layout="@layout/no_record_layout" />
+
+    <include layout="@layout/no_internet_connection" />
+
+    <include layout="@layout/progress_bar" />
+
+
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="bottom"
+    android:id="@+id/ll_navigation_head"
+    android:background="@color/apptheme"
+    android:padding="@dimen/ten"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image_new"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="left"
+        android:visibility="gone"
+        android:layout_margin="@dimen/ten"
+        />
+    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+        android:id="@+id/txt_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textColor="@color/white"
+        android:textSize="@dimen/twenty"
+        android:layout_marginLeft="@dimen/ten"
+        android:layout_marginTop="@dimen/ten"
+        android:visibility="visible"
+        android:layout_marginBottom="@dimen/ten"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        />
+
+    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+        android:id="@+id/txt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/seventeen"
+        android:layout_marginLeft="@dimen/ten"
+        android:layout_marginTop="@dimen/ten"
+        android:visibility="visible"
+        android:layout_marginBottom="@dimen/ten"
+        />
+
+
+</LinearLayout>

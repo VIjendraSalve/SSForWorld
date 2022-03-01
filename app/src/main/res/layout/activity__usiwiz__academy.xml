@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ten"
+                android:layout_marginTop="@dimen/ten"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/fifteen"
+                app:cardElevation="@dimen/five"
+                 >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/ten"
+                        android:padding="@dimen/two"
+
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="1dp"
+                        tools:ignore="VectorDrawableCompat"
+
+                        />
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                        android:id="@+id/tv_Member_Directory"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/Member_Directory"
+                        android:textColor="@color/apptheme"
+                        android:textSize="@dimen/eighteen"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ten"
+                android:layout_marginTop="@dimen/ten"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/fifteen"
+                app:cardElevation="@dimen/ten"
+                 >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/imageView_BOE_Activity"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/ten"
+                        android:padding="@dimen/two"
+                        android:src="@drawable/nav_boeactivity"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="1dp"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                        android:id="@+id/tv_BOE_Activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/BOE_Activity"
+                        android:textColor="@color/apptheme"
+                        android:textSize="@dimen/eighteen"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ten"
+                android:layout_marginTop="@dimen/ten"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/fifteen"
+                app:cardElevation="@dimen/ten">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/imageView_USIWIZ_TV"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/ten"
+                        android:padding="@dimen/two"
+
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="1dp"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                        android:id="@+id/tv_USIWIZ_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/USIWIZ_TV"
+                        android:textColor="@color/apptheme"
+                        android:textSize="@dimen/eighteen"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ten"
+                android:layout_marginTop="@dimen/ten"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/fifteen"
+                app:cardElevation="@dimen/ten">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/imageView_profile"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/ten"
+                        android:padding="@dimen/two"
+                        android:src="@drawable/ic_person_black_24dp"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="1dp"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                        android:id="@+id/tv_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/Profile"
+                        android:textColor="@color/apptheme"
+                        android:textSize="@dimen/eighteen"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ten"
+                android:layout_marginTop="@dimen/ten"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/fifteen"
+                app:cardElevation="@dimen/ten">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/imageView_forum"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/ten"
+                        android:padding="@dimen/two"
+                        android:src="@drawable/ic_forum_black_24dp"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="1dp"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                        android:id="@+id/tv_forum"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/Forums"
+                        android:textColor="@color/apptheme"
+                        android:textSize="@dimen/eighteen"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ten"
+                android:layout_marginTop="@dimen/ten"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/fifteen"
+                app:cardElevation="@dimen/ten">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/imageView_feedback"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/ten"
+                        android:padding="@dimen/two"
+                        android:src="@drawable/ic_feedback_black_24dp"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="1dp"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Bold
+                        android:id="@+id/tv_feedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/Feedback"
+                        android:textColor="@color/apptheme"
+                        android:textSize="@dimen/eighteen"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

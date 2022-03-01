@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:isScrollContainer="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/ten">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/five"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="@dimen/five"
+                app:cardUseCompatPadding="true"
+                tools:style="@style/CardView"
+                tools:ignore="PrivateResource">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/five"
+                    android:text="About Us "
+                    android:textColor="@color/apptheme"
+                    android:textSize="@dimen/sixteen"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:visibility="gone"/>
+
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                    android:id="@+id/txt_about_us"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/five"
+                    android:layout_marginTop="@dimen/ten"
+                    android:text="@string/AboutUS"
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/twelve"
+                    />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

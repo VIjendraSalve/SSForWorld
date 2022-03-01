@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        tools:style="@style/CardView"
+        tools:ignore="PrivateResource">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/five"
+                android:layout_marginLeft="@dimen/three"
+                android:layout_marginRight="@dimen/three"
+                android:layout_marginTop="@dimen/five"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="2.8"
+                    android:visibility="gone"
+                    android:gravity="center">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_user_image"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/no_image_available" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="8.1"
+                            android:gravity="left"
+                            android:orientation="vertical">
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Name"
+                                android:textColor="@color/grey_1"
+                                android:textSize="@dimen/ten" />
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:id="@+id/tv_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/two"
+                                android:textColor="@color/apptheme"
+                                android:textSize="@dimen/twelve" />
+
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/five"
+                                android:text="Mobile"
+                                android:textColor="@color/grey_1"
+                                android:textSize="@dimen/ten" />
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:id="@+id/tv_mobile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/two"
+
+                                android:textColor="@color/apptheme"
+                                android:textSize="@dimen/twelve" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/three"
+                            android:layout_weight="2.9"
+                            android:gravity="left"
+                            android:orientation="vertical">
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/five"
+                                android:text="City"
+                                android:textColor="@color/grey_1"
+                                android:textSize="@dimen/ten" />
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:id="@+id/tv_city"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/two"
+                                android:textColor="@color/apptheme"
+                                android:textSize="@dimen/twelve" />
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Designation"
+                                android:visibility="gone"
+                                android:textColor="@color/grey_1"
+                                android:textSize="@dimen/ten" />
+
+                            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                                android:id="@+id/tv_designation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/two"
+                                android:text="Director"
+                                android:visibility="gone"
+                                android:textColor="@color/apptheme"
+                                android:textSize="@dimen/twelve" />
+
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/five"
+                        android:text="Email"
+                        android:textColor="@color/grey_1"
+                        android:textSize="@dimen/ten" />
+
+                    <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Medium
+                        android:id="@+id/tv_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/two"
+                        android:textColor="@color/apptheme"
+                        android:textSize="@dimen/twelve" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

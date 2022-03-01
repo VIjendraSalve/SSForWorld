@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsb_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:scrollbars="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!--  <ImageView
+                  android:id="@+id/image_view"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:scaleType="centerInside"
+                  android:src="@drawable/event1"
+
+                  />-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <!--  <android.support.v7.widget.CardView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="@dimen/five"
+                  android:elevation="@dimen/ten"
+                  app:cardBackgroundColor="@color/white"
+                  app:cardCornerRadius="@dimen/five"
+                  app:cardUseCompatPadding="true">
+
+
+              </android.support.v7.widget.CardView>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/textView_brand1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:layout_weight="1"
+                        android:text="Brand"
+                        android:textColor="@color/grey_1"
+                        android:textSize="@dimen/fifteen" />
+
+                    <TextView
+                        android:id="@+id/textView_brand"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/fifteen" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_gray"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/five"
+                    android:padding="@dimen/five"
+                    android:background="@drawable/edittext_background"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_product_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:text="Product Name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/twenty"
+                        android:textStyle="normal" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five"
+                        android:layout_marginRight="@dimen/ten"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/fifteen" />
+
+                    <TextView
+                        android:id="@+id/textView_originalCost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/fifteen" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/five"
+                    android:layout_marginRight="@dimen/five"
+                    android:layout_marginBottom="@dimen/five"
+                    android:background="@drawable/edittext_background"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/five"
+                    android:paddingRight="@dimen/five"
+                    android:paddingBottom="@dimen/five"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/five"
+                        android:text="@string/desc"
+                        android:textColor="@color/grey_1"
+                        android:textSize="@dimen/fifteen" />
+
+                    <TextView
+                        android:id="@+id/textView_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/five"
+                        android:text="Desc"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/fifteen" />
+                </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_product_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/five"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginRight="@dimen/five"
+                    android:layout_marginBottom="@dimen/ten"
+                    android:padding="@dimen/five"
+                    android:scrollbars="horizontal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

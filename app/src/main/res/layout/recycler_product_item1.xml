@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/five"
+            app:cardUseCompatPadding="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/ten"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:id="@+id/rl_Images"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/imageViewpro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_txt_data"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/five"
+                    android:layout_toRightOf="@+id/rl_Images"
+                    android:padding="2dp"
+                    android:layout_weight="1.8"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/txt_productName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text="Product Name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/seventeen"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textview_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/five"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/ic_person_black_24dp"
+                        android:drawableTint="@color/grey_1"
+                        android:drawablePadding="@dimen/seven"
+                        android:maxLines="2"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_purpose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text="2000"
+                        android:textColor="@color/black"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textview_name"
+                        android:layout_marginTop="2dp"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/txt_contact"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/five"
+                            android:drawableLeft="@drawable/ic_call_black_24dp"
+                            android:drawableTint="@color/grey_1"
+                            android:drawablePadding="@dimen/seven"
+                            android:maxLines="2"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:autoLink="phone"
+                            />
+
+                        <TextView
+                            android:id="@+id/txt_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/ic_location"
+                            android:drawablePadding="@dimen/seven"
+                            android:maxLines="2"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/txt_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textColor="@color/blue"
+                        android:textStyle="italic"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    app:srcCompat="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    android:layout_weight="0.2"
+                    android:layout_gravity="center"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_delete_user"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:tint="@color/apptheme"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_delete_black_24dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
