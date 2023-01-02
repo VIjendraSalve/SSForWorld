@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="productcost">Product Cost</string>
+    <string name="scratch">Scratch Coupon</string>
+    <string name="vendorinformation">Vendor Information</string>
+    <string name="requestDiscount">Request Discount</string>
+    <string name="requestid">Request Id</string>
+    <string name="discountedAmount">Discount Amount</string>
+    <string name="product_desc">Product Description</string>
+    <string name="businessNumber">Business Mobile Number</string>
+    <string name="discountrequest">Discount Request List</string>
+    <string name="approval_date">Approval Date</string>
+    <string name="vendorrequest">Request From User</string>
+    <string name="discount">Discount</string>
+    <string name="user_name">User Name</string>
+    <string name="myrequest">My Request</string>
+    <string name="mydiscountrequest">My Discount Request</string>
+    <string name="qrcode">My QR Code</string>
+    <string name="see_more">See More</string>
 </resources>

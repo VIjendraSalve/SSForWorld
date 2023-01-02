@@ -61,6 +61,7 @@ public class Constants {
     public static final String REFERENCE_NUMBER = "reference_number";
     public static final String SELF_REFERENCE_NUMBER = "self_reference_number";
     public static final String IS_VERIFIED = "IS_VERIFIED";
+    public static final String IS_PRIME = "IS_PRIME";
     public static final String category_type = "category_type";
     public static final String subcategoryID = "subcategoryID";
     public static final String parent_categoryID = "parent_categoryID";
@@ -171,6 +172,12 @@ public class Constants {
     public static final String DISTRICT_NAME_Location = "DISTRICT_NAME_Location";
     public static final String OfferIDForUpdate = "OfferIDForUpdate";
     public static final String business_banner = "business_banner";
+    public static final String LuckyDrawConstant = "LuckyDrawConstant";
+    public static final String WalletBalance = "WalletBalance";
+    public static final String PRIME_CARD_NUMBER = "PRIME_CARD_NUMBER";
+    public static final String PRIME_START_DATE = "PRIME_START_DATE";
+    public static final String PRIME_END_DATE = "PRIME_END_DATE";
+    public static final String Image = "Image";
 
 
     public static void EditTextAnim(final EditText editText) {

@@ -4,10 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.Activity_My_Rewards"
-
-
-    >
+    tools:context=".Activities.Activity_My_Rewards">
 
     <include layout="@layout/toolbar"></include>
 
@@ -17,10 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbar"
         android:layout_gravity="center"
-        android:orientation="horizontal"
-        android:padding="@dimen/ten"
-
-        >
+        android:orientation="vertical"
+        android:padding="@dimen/ten">
 
 
         <androidx.cardview.widget.CardView
@@ -29,6 +24,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="@dimen/five"
             app:cardElevation="@dimen/five"
+            android:visibility="gone"
             app:cardMaxElevation="@dimen/five"
             app:cardUseCompatPadding="true">
 
@@ -65,7 +61,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="15dp"
@@ -90,9 +86,17 @@
 
         </androidx.cardview.widget.CardView>
 
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="abc fbgngfhgfh"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sixteen"/>
+
 
         <androidx.cardview.widget.CardView
-            android:layout_width="170dp"
+            android:layout_width="match_parent"
             android:layout_height="180dp"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="@dimen/five"
@@ -103,7 +107,7 @@
 
             <com.cooltechworks.views.ScratchImageView
                 android:id="@+id/sample_image"
-                android:layout_width="170dp"
+                android:layout_width="match_parent"
                 android:layout_height="180dp"
                 android:src="@drawable/giftbox"
                 android:padding="@dimen/forty"
@@ -113,6 +117,8 @@
             </com.cooltechworks.views.ScratchImageView>
 
         </androidx.cardview.widget.CardView>
+
+
 
 
     </LinearLayout>

@@ -20,9 +20,24 @@
         android:title="@string/select_language" />
 
     <item
+        android:id="@+id/nav_reward"
+        android:icon="@drawable/like_drawer"
+        android:title="@string/scratch" />
+
+    <item
         android:id="@+id/nav_referrals"
         android:icon="@drawable/wallet_drawer"
         android:title="@string/mywallet" />
+
+    <item
+        android:id="@+id/nav_scan_barcode"
+        android:icon="@drawable/qr_code"
+        android:title="@string/scan_barcode" />
+
+    <item
+        android:id="@+id/nav_myqrrequest"
+        android:icon="@drawable/order_drawer"
+        android:title="@string/mydiscountrequest" />
 
     <item
         android:id="@+id/nav_Share"
@@ -65,9 +80,17 @@
             android:title="@string/myservice" />
 
         <item
+            android:id="@+id/nav_vendorRequest"
+            android:icon="@drawable/product_drawer"
+            android:title="@string/vendorrequest" />
+
+
+        <item
             android:id="@+id/nav_myOrders"
             android:icon="@drawable/order_drawer"
             android:title="@string/completedorders" />
+
+
 
         <item
             android:id="@+id/nav_offer_creation"
@@ -78,6 +101,11 @@
             android:id="@+id/nav_offer_listing"
             android:icon="@drawable/offer_drawer"
             android:title="@string/offers" />
+
+        <item
+            android:id="@+id/nav_my_qrcode"
+            android:icon="@drawable/offer_drawer"
+            android:title="@string/qrcode" />
 
       <!--  <item
             android:id="@+id/nav_campaign"
@@ -105,10 +133,7 @@
             android:icon="@drawable/password_drawer"
             android:title="@string/changepassword" />
 
-        <item
-            android:id="@+id/nav_reward"
-            android:icon="@drawable/like_drawer"
-            android:title="Reward" />
+
 
         <!--  <item
               android:id="@+id/nav_details"

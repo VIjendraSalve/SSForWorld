@@ -9,8 +9,7 @@
         android:layout_height="120dp"
         app:cardCornerRadius="@dimen/four"
         app:cardElevation="3dp"
-app:cardUseCompatPadding="true"
-        >
+        app:cardUseCompatPadding="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,7 +23,6 @@ app:cardUseCompatPadding="true"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="6"
-
                 android:background="@drawable/circle_category"
                 android:gravity="center">
 
@@ -38,23 +36,22 @@ app:cardUseCompatPadding="true"
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="3"
                 android:layout_marginTop="@dimen/two"
+                android:layout_weight="3"
                 android:gravity="center">
 
 
-
-            <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
-                android:id="@+id/txt_buisnessName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/imageView"
-                android:fontFamily="Lato-Black.ttf"
-                android:gravity="center"
-                android:layout_marginRight="@dimen/five"
-                android:paddingRight="@dimen/three"
-                android:textColor="@color/black"
-                android:textSize="10sp" />
+                <com.windhans.client.forworld.customfonts.MyTextView_Poppins_Regular
+                    android:id="@+id/txt_buisnessName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView"
+                    android:layout_marginRight="@dimen/five"
+                    android:fontFamily="Lato-Black.ttf"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/three"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
             </LinearLayout>
 
         </LinearLayout>

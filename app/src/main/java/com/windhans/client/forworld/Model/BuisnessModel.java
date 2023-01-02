@@ -117,6 +117,7 @@ public class BuisnessModel implements Parcelable {
         this.pincode = pincode;
     }
 
+
     String pincode;
 
     public BuisnessModel(JSONObject object) {

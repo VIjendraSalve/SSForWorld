@@ -89,7 +89,8 @@ public class BarcodeScanActivity extends AppCompatActivity {
         btnAction = findViewById(R.id.btn_submit);
 
 
-        Log.d("data", "getEventAboutData: "+"user id "+user_id+"event id "+event_id+"delegate id "+delegate_id);
+        Log.d("data", "getEventAboutData: "+"user id "+user_id+"event id "
+                +event_id+"delegate id "+delegate_id);
         btnAction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

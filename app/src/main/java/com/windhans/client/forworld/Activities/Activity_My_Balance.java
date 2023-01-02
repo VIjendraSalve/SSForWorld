@@ -64,6 +64,7 @@ public class Activity_My_Balance extends AppCompatActivity implements View.OnCli
     MyTextView_Poppins_Bold txt_total_balance;
     TextView textCartItemCount;
     private Integer mCartItemCount = 0;
+    private LinearLayout ll_main_class;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,7 +85,14 @@ public class Activity_My_Balance extends AppCompatActivity implements View.OnCli
         btnRetry.setOnClickListener(this);
 
         swipeRefreshLayout = findViewById(R.id.refresh);
-
+        ll_main_class = findViewById(R.id.ll_main_class);
+        ll_main_class.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Activity_My_Balance.this, ActivityProductList.class);
+                startActivity(intent);
+            }
+        });
         swipeRefreshLayout.setOnRefreshListener(this);
 
         progressView = findViewById(R.id.progress_view);

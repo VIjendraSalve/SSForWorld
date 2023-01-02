@@ -13,9 +13,12 @@ import android.widget.Toast;
 import com.cooltechworks.views.ScratchImageView;
 import com.cooltechworks.views.ScratchTextView;
 import com.windhans.client.forworld.R;
+import com.windhans.client.forworld.my_library.Constants;
+import com.windhans.client.forworld.my_library.Shared_Preferences;
 
 public class Activity_My_Rewards extends AppCompatActivity {
     private ScratchImageView sample_image;
+    TextView tv_message;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,14 +30,17 @@ public class Activity_My_Rewards extends AppCompatActivity {
         title.setText(this.getResources().getString(R.string.myrewards_offers));
 
         sample_image=findViewById(R.id.sample_image);
+        tv_message=findViewById(R.id.tv_message);
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         ScratchTextView scratchTextView = new ScratchTextView(this);
+        tv_message.setText("Scratch card will be display after " + Shared_Preferences.getPrefs(Activity_My_Rewards.this, Constants.LuckyDrawConstant) + " Prime members registration");
 
-        sample_image.setRevealListener(new ScratchImageView.IRevealListener() {
+
+        /*sample_image.setRevealListener(new ScratchImageView.IRevealListener() {
             @Override
             public void onRevealed(ScratchImageView iv) {
 
@@ -42,15 +48,11 @@ public class Activity_My_Rewards extends AppCompatActivity {
 
             @Override
             public void onRevealPercentChangedListener(ScratchImageView siv, float percent) {
-                siv.clear();
-                //Toast.makeText(Activity_My_Rewards.this, ""+(percent*100), Toast.LENGTH_SHORT).show();
-                if(percent >= 0.5){
-                    siv.reveal();
-                }
+
             }
         });
-
-        scratchTextView.setRevealListener(new ScratchTextView.IRevealListener() {
+*/
+        /*scratchTextView.setRevealListener(new ScratchTextView.IRevealListener() {
             @Override
             public void onRevealed(ScratchTextView tv) {
                 //on reveal
@@ -61,7 +63,7 @@ public class Activity_My_Rewards extends AppCompatActivity {
             public void onRevealPercentChangedListener(ScratchTextView stv, float percent) {
                 Toast.makeText(Activity_My_Rewards.this, ""+percent, Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
     }
 
     @Override

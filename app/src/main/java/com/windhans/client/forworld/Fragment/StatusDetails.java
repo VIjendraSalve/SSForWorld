@@ -241,12 +241,13 @@ public class StatusDetails extends Fragment implements View.OnClickListener, Swi
                     Boolean result = jsonObject.getBoolean("result");
                     String reason = jsonObject.getString("reason");
                     if (result) {
-                        progressDialog.dismiss();
+
                         getLeadDetails();
                         Toast.makeText(getContext(), reason, Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(getContext(), reason, Toast.LENGTH_SHORT).show();
                     }
+                    progressDialog.dismiss();
                 } catch (IOException e) {
                     e.printStackTrace();
                 } catch (JSONException e) {
@@ -281,10 +282,10 @@ public class StatusDetails extends Fragment implements View.OnClickListener, Swi
                     Boolean result = jsonObject.getBoolean("result");
                     String reason = jsonObject.getString("reason");
                     if (result) {
-                        Toast.makeText(getContext(), reason, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), " "+reason, Toast.LENGTH_SHORT).show();
                         getLeadDetails();
                     } else {
-                        Toast.makeText(getContext(), reason, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), " "+reason, Toast.LENGTH_SHORT).show();
                     }
                 } catch (IOException e) {
                     e.printStackTrace();

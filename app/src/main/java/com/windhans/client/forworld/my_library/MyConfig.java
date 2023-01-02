@@ -45,16 +45,16 @@ MyConfig {
     public static final String JSON_BusinessPath = "http://godapark.com/ssforworld/assets/uploads/banner/";
     public static final String JSON_CategoryPath = "http://godapark.com/ssforworld/assets/uploads/category/";*/
 
-    public static final String JSON_BASE_URL = "http://wetap.in";
-    public static final String SSWORLD = "/2022/forworld";
-    /*public static final String JSON_BASE_URL = "http://forworldservices.com";
-    public static final String SSWORLD = "";*/
-    public static final String JSON_ProfileImage = "http://wetap.in/2022/forworld/assets/uploads/";
-    public static final String JSON_BusinessImage = "http://wetap.in/2022/forworld/assets/uploads/product/";
-    public static final String JSON_BusinessOffers = "http://wetap.in/2022/forworld/assets/uploads/offers/";
-    public static final String JSON_BusinessPath = "http://wetap.in/2022/forworld/assets/uploads/banner/";
-    public static final String JSON_ServicePath = "http://wetap.in/2022/forworld/assets/uploads/service/";
-    public static final String JSON_CategoryPath = "http://wetap.in/2022/forworld/assets/uploads/category/";
+   /* public static final String JSON_BASE_URL = "http://wetap.in";
+    public static final String SSWORLD = "/2022/forworld";*/
+    public static final String JSON_BASE_URL = "https://forworldservices.com/";
+    public static final String SSWORLD = "foradmin/";
+    public static final String JSON_ProfileImage = "https://forworldservices.com/foradmin/assets/uploads/";
+    public static final String JSON_BusinessImage = "https://forworldservices.com/foradmin/assets/uploads/product/";
+    public static final String JSON_BusinessOffers = "https://forworldservices.com/foradmin/assets/uploads/offers/";
+    public static final String JSON_BusinessPath = "https://forworldservices.com/foradmin/assets/uploads/banner/";
+    public static final String JSON_ServicePath = "https://forworldservices.com/foradmin/assets/uploads/service/";
+    public static final String JSON_CategoryPath = "https://forworldservices.com/foradmin/assets/uploads/category/";
 
 
     public static Dispatcher dispatcher;

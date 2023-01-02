@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
@@ -37,7 +38,10 @@ import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
 import com.toptoche.searchablespinnerlibrary.SearchableSpinner;
 import com.windhans.client.forworld.Activities.ActivityBuisnessListing;
+import com.windhans.client.forworld.Activities.ActivityMainCategory;
 import com.windhans.client.forworld.Activities.ActivityProductUniversalList;
+import com.windhans.client.forworld.Activities.Activity_My_Balance;
+import com.windhans.client.forworld.Activities.FullPhotoZoomActivity;
 import com.windhans.client.forworld.Activities.UpdateBusinessProfile;
 import com.windhans.client.forworld.Adapter.BusinessAdapter;
 import com.windhans.client.forworld.Adapter.DashboardAdapter;
@@ -47,6 +51,7 @@ import com.windhans.client.forworld.Model.BuisnessModel;
 import com.windhans.client.forworld.Model.CategoryModel;
 import com.windhans.client.forworld.Model.Dashboard;
 import com.windhans.client.forworld.Model.District;
+import com.windhans.client.forworld.Model.MyWallet;
 import com.windhans.client.forworld.Model.NewProduct;
 import com.windhans.client.forworld.Model.ProductList;
 import com.windhans.client.forworld.Model.Services;
@@ -76,49 +81,51 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
 
 public class HomeFragment extends Fragment implements View.OnClickListener, BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
+    public static final int EXTRA_REVEAL_CENTER_PADDING = 40;
+    RecyclerView recycler_view, recycler_view_subcateory, recycler_view_business, recycler_view_services;
+    List<Dashboard> dashboardList;
+    List<CategoryModel> categoryModelList;
+    List<CategoryModel> categoryModelList1;
+    List<Services> servicesList;
+    List<BuisnessModel> buisnessModelList;
+    List<BuisnessModel> buisnessModelList1 = new ArrayList<>();
+    LinearLayout ll_product_details;
+    ImageView imageView;
+    TextView btn_view_more_business;
+    MyTextView_Poppins_Regular btn_view_more;
+    CardView cardView;
     private View retView;
     private ProgressDialog progressDialog;
     private LinearLayout noRecordLayout, noConnectionLayout;
     private ProgressBar progressView, progressBar_endless;
     private Button btnRetry;
     private int page_count;
-    RecyclerView recycler_view, recycler_view_subcateory, recycler_view_business, recycler_view_services;
     private Handler mHandler;
     private UserDashboardAdapter mAdapter;
     private DashboardAdapter mAdapter1;
     private DashboardAdapterForServices dashboardAdapterForServices;
     private BusinessAdapter bAdapter;
     private int remainingCount;
-    List<Dashboard> dashboardList;
-    List<CategoryModel> categoryModelList;
-    List<CategoryModel> categoryModelList1;
-    List<Services> servicesList;
     private ArrayList<NewProduct> productList = new ArrayList<>();
     private ArrayList<NewProduct> productList_array = new ArrayList<>();
     private List<ProductList> filterdpatientList = new ArrayList<>();
-    List<BuisnessModel> buisnessModelList;
-    List<BuisnessModel> buisnessModelList1 = new ArrayList<>();
-    LinearLayout ll_product_details;
     private SwipeRefreshLayout swipeRefreshLayout;
     private TextView tv_business_title;
-    ImageView imageView;
     private String query = "";
     private EditText mSearchView;
     private ArrayList<String> sliderImages1 = new ArrayList<>();
     private ArrayList<String> sliderImages2 = new ArrayList<>();
     private ArrayList<String> sliderImages3 = new ArrayList<>();
-
     private HashMap<String, Integer> sliderImages = new HashMap<String, Integer>();
     private int index = 0;
-    TextView btn_view_more_business;
-    MyTextView_Poppins_Regular btn_view_more;
-    CardView cardView;
-    public static final int EXTRA_REVEAL_CENTER_PADDING = 40;
     private LinearLayout ll_search_view;
     private SearchableSpinner spinner_district;
     private String districtId = "";
     private ArrayList<District> districtArrayList = new ArrayList<>();
     private GPSTracker gpsTracker;
+    private CardView card_view_wallet_card;
+    private TextView tv_my_card, tv_valid_from, tv_valid_upto, tv_wallet_balance;
+    private TextView tv_see_more;
 
     @Nullable
     @Override
@@ -150,6 +157,31 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Base
         cardView = retView.findViewById(R.id.cardView);
         mSearchView = retView.findViewById(R.id.search_view1);
         ll_search_view = retView.findViewById(R.id.ll_search_view);
+        card_view_wallet_card = retView.findViewById(R.id.card_view_wallet_card);
+        tv_my_card = retView.findViewById(R.id.tv_my_card);
+        tv_valid_from = retView.findViewById(R.id.tv_valid_from);
+        tv_valid_upto = retView.findViewById(R.id.tv_valid_upto);
+        tv_wallet_balance = retView.findViewById(R.id.tv_wallet_balance);
+        tv_see_more = retView.findViewById(R.id.tv_see_more);
+
+
+        if (Shared_Preferences.getPrefs(getContext(), Constants.IS_PRIME).equals("1")) {
+            card_view_wallet_card.setVisibility(View.VISIBLE);
+            tv_my_card.setText(Shared_Preferences.getPrefs(getContext(), Constants.PRIME_CARD_NUMBER));
+            tv_valid_from.setText(Shared_Preferences.getPrefs(getContext(), Constants.PRIME_START_DATE));
+            tv_valid_upto.setText(Shared_Preferences.getPrefs(getContext(), Constants.PRIME_END_DATE));
+
+        } else {
+            card_view_wallet_card.setVisibility(View.GONE);
+        }
+
+        card_view_wallet_card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), Activity_My_Balance.class);
+                startActivity(intent);
+            }
+        });
 
         mSearchView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -170,6 +202,14 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Base
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), ActivityBuisnessListing.class);
+                startActivity(intent);
+            }
+        });
+
+        tv_see_more.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), ActivityMainCategory.class);
                 startActivity(intent);
             }
         });
@@ -357,6 +397,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Base
                     boolean res = jsonObject.getBoolean("result");
 
                     if (res) {
+
+                        Shared_Preferences.setPrefs(getContext(), Constants.LuckyDrawConstant, jsonObject.getString("lucky_draw_constant"));
+                        Shared_Preferences.setPrefs(getContext(), Constants.WalletBalance, jsonObject.getString("wallet_balance"));
+                        tv_wallet_balance.setText(Shared_Preferences.getPrefs(getContext(), Constants.WalletBalance));
+                        //Toast.makeText(getContext(), ""+jsonObject.getString("lucky_draw_constant"), Toast.LENGTH_SHORT).show();
+                        Log.d("Vijendra", "onResponse: " + Shared_Preferences.getPrefs(getContext(), Constants.LuckyDrawConstant));
                         sliderImages1.clear();
                         JSONObject jsonObject1 = jsonObject.getJSONObject("bannerImage");
                         JSONArray jsonArray = jsonObject1.getJSONArray("company");
@@ -419,10 +465,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Base
                             Log.d("Images1234", "onResponse: " + sliderImages1.get(i));
                         }
 
+
+                        DefaultSliderView defaultSliderView = null;
                         Log.d("IndexSize", "onResponse: " + index);
                         for (int i = 0; i < sliderImages1.size(); i++) {
                             index++;
-                            DefaultSliderView defaultSliderView = new DefaultSliderView(getContext());
+                            defaultSliderView = new DefaultSliderView(getContext());
                             // Log.d("image", sliderImages.get(i));
                             defaultSliderView
                                     //.description(name)
@@ -432,7 +480,20 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Base
                             defaultSliderView.getBundle().putString("extra", sliderImages1.get(i));
 
                             imgSliderLayout.addSlider(defaultSliderView);
+
+
+
                         }
+
+                        defaultSliderView.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+                            @Override
+                            public void onSliderClick(BaseSliderView slider) {
+                                //Toast.makeText(getActivity(), ""+imgSliderLayout.getCurrentPosition(), Toast.LENGTH_SHORT).show();
+                              /*  Intent intent = new Intent(getActivity(), FullPhotoZoomActivity.class);
+                                intent.putExtra(Constants.Image,sliderImages1.get(imgSliderLayout.getCurrentPosition()));
+                                startActivity(intent);*/
+                            }
+                        });
 
 
                         imgSliderLayout.setPresetTransformer(SliderLayout.Transformer.ZoomOutSlide);
@@ -440,6 +501,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Base
                         imgSliderLayout.setCustomAnimation(new DescriptionAnimation());
                         imgSliderLayout.setIndicatorVisibility(PagerIndicator.IndicatorVisibility.Invisible);
                         imgSliderLayout.setDuration(3000);
+
+
+
 
                         // slider 2
                         SliderLayout imgSliderLayout1 = (SliderLayout) retView.findViewById(R.id.imgSliderLayout);
@@ -449,16 +513,25 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Base
 
                         for (int i = 0; i < sliderImages3.size(); i++) {
                             index++;
-                            DefaultSliderView defaultSliderView = new DefaultSliderView(getContext());
+                            DefaultSliderView defaultSliderView1 = new DefaultSliderView(getContext());
                             // Log.d("image", sliderImages.get(i));
-                            defaultSliderView
+                            defaultSliderView1
                                     //.description(name)
                                     .image(sliderImages3.get(i))
                                     .setScaleType(BaseSliderView.ScaleType.Fit);
-                            defaultSliderView.bundle(new Bundle());
-                            defaultSliderView.getBundle().putString("extra", sliderImages3.get(i));
+                            defaultSliderView1.bundle(new Bundle());
+                            defaultSliderView1.getBundle().putString("extra", sliderImages3.get(i));
 
-                            imgSliderLayout1.addSlider(defaultSliderView);
+                            imgSliderLayout1.addSlider(defaultSliderView1);
+                            defaultSliderView1.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+                                @Override
+                                public void onSliderClick(BaseSliderView slider) {
+                                    //Toast.makeText(getActivity(), ""+imgSliderLayout.getCurrentPosition(), Toast.LENGTH_SHORT).show();
+                                  /*  Intent intent = new Intent(getActivity(), FullPhotoZoomActivity.class);
+                                    intent.putExtra(Constants.Image,sliderImages3.get(imgSliderLayout1.getCurrentPosition()));
+                                    startActivity(intent);*/
+                                }
+                            });
                         }
 
 
@@ -477,16 +550,27 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Base
 
                         for (int i = 0; i < sliderImages2.size(); i++) {
                             index++;
-                            DefaultSliderView defaultSliderView = new DefaultSliderView(getContext());
+                            DefaultSliderView defaultSliderView2 = new DefaultSliderView(getContext());
                             // Log.d("image", sliderImages.get(i));
-                            defaultSliderView
+                            defaultSliderView2
                                     //.description(name)
                                     .image(sliderImages2.get(i))
                                     .setScaleType(BaseSliderView.ScaleType.Fit);
-                            defaultSliderView.bundle(new Bundle());
-                            defaultSliderView.getBundle().putString("extra", sliderImages2.get(i));
+                            defaultSliderView2.bundle(new Bundle());
+                            defaultSliderView2.getBundle().putString("extra", sliderImages2.get(i));
 
-                            imgSliderLayout3.addSlider(defaultSliderView);
+                            imgSliderLayout3.addSlider(defaultSliderView2);
+
+                            defaultSliderView.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+                                @Override
+                                public void onSliderClick(BaseSliderView slider) {
+                                    //Toast.makeText(getActivity(), ""+imgSliderLayout.getCurrentPosition(), Toast.LENGTH_SHORT).show();
+                                    /*Intent intent = new Intent(getActivity(), FullPhotoZoomActivity.class);
+                                    intent.putExtra(Constants.Image,sliderImages2.get(imgSliderLayout3.getCurrentPosition()));
+                                    startActivity(intent);*/
+                                }
+                            });
+
                         }
 
 
@@ -495,6 +579,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Base
                         imgSliderLayout3.setCustomAnimation(new DescriptionAnimation());
                         imgSliderLayout3.setDuration(3000);
                         imgSliderLayout3.setIndicatorVisibility(PagerIndicator.IndicatorVisibility.Invisible);
+
 
                         progressDialog.dismiss();
                     } else {
@@ -714,6 +799,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Base
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject object = jsonArray.getJSONObject(i);
                         categoryModelList.add(new CategoryModel(object));
+                        //categoryModelList1.add(new CategoryModel(object));
 
                         //Shared_Preferences.setPrefs(getContext(),Constants.REG_ID,object.getString("user_id"));
                     }
@@ -1030,7 +1116,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Base
                         recycler_view_business.setItemAnimator(new DefaultItemAnimator());
                         recycler_view_business.setAdapter(bAdapter);
                         bAdapter.notifyDataSetChanged();
-
 
 
                         progressDialog.dismiss();

@@ -106,6 +106,8 @@ public class VendorByProductAdapter extends RecyclerView.Adapter<VendorByProduct
                         +vendorByProductList.get(position).getUser_id()
                         +","+vendorByProductList.get(position).getProdutId());
 
+               // Toast.makeText(context, "Comming Soon", Toast.LENGTH_SHORT).show();
+
                 addInToCart(
                         vendorByProductList.get(position).getUser_id(),
                         vendorByProductList.get(position).getProdutId(),

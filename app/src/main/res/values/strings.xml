@@ -141,7 +141,7 @@ and meetings for exchange and dissemination of knowledge and to foster social in
     <string name="version">Version</string>
     <string name="mybalance">My Balance</string>
     <string name="myservice">My Services</string>
-    <string name="myrewards_offers">My Rewards /Offers</string>
+    <string name="myrewards_offers">Scratch coupon</string>
     <string name="myenquiry">My Enquiry</string>
     <string name="mycart">My Cart</string>
     <string name="myfavorite">My Favorite</string>
@@ -337,6 +337,23 @@ and meetings for exchange and dissemination of knowledge and to foster social in
     <string name="google_pay">Google Pay Number</string>
     <string name="phone_pay">Phone Pay</string>
     <string name="paytm">PayTM</string>
+    <string name="scratch">Scratch Coupon</string>
+    <string name="vendorinformation">Vendor Information</string>
+    <string name="requestDiscount">Request Discount</string>
+    <string name="requestid">Request Id</string>
+    <string name="discountedAmount">Discount Amount</string>
+    <string name="product_desc">Product Description</string>
+    <string name="businessNumber">Business Mobile Number</string>
+    <string name="discountrequest">Discount Request List</string>
+    <string name="approval_date">Approval Date</string>
+    <string name="vendorrequest">Request From User</string>
+    <string name="discount">Discount</string>
+    <string name="user_name">User Name</string>
+    <string name="myrequest">My Request</string>
+    <string name="mydiscountrequest">My Discount Request</string>
+    <string name="qrcode">My QR Code</string>
+    <string name="see_more">See More</string>
+    <string name="photo">Image</string>
 
 
 </resources>

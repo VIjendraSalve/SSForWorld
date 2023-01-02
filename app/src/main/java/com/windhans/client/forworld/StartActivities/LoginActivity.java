@@ -192,6 +192,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 et_password.getText().toString(),
                 Shared_Preferences.getPrefs(LoginActivity.this, Constants.NOTIFICATION_TOKEN));
 
+        Log.d("Vijendra", "JSON_BASE_URL: "+MyConfig.JSON_BASE_URL);
+        Log.d("Vijendra", "JSON_SUBBASE_URL: "+MyConfig.SSWORLD + "/appLogin");
+        Log.d("Vijendra", "result: "+result.toString());
 
         result.enqueue(new Callback<ResponseBody>() {
             @Override
@@ -222,6 +225,24 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                 Shared_Preferences.setPrefs(LoginActivity.this, Constants.REFERENCE_NUMBER, jsonObject1.getString("reference_number"));
                                 Shared_Preferences.setPrefs(LoginActivity.this, Constants.SELF_REFERENCE_NUMBER, jsonObject1.getString("self_reference_number"));
                                 Shared_Preferences.setPrefs(LoginActivity.this, Constants.IS_VERIFIED, jsonObject1.getString("is_verified"));
+
+                                if(jsonObject1.getString("is_prime").equals("1")){
+                                    if(jsonObject1.getString("is_prime_verified").equals("1")){
+                                        Shared_Preferences.setPrefs(LoginActivity.this,
+                                                Constants.IS_PRIME, "1");
+                                        Shared_Preferences.setPrefs(LoginActivity.this, Constants.PRIME_CARD_NUMBER, jsonObject1.getString("prime_user_card_number"));
+                                        Shared_Preferences.setPrefs(LoginActivity.this, Constants.PRIME_START_DATE, jsonObject1.getString("prime_start_date"));
+                                        Shared_Preferences.setPrefs(LoginActivity.this, Constants.PRIME_END_DATE, jsonObject1.getString("prime_end_date"));
+
+                                    }else{
+                                        Shared_Preferences.setPrefs(LoginActivity.this,
+                                                Constants.IS_PRIME, "0");
+                                    }
+                                }else{
+                                    Shared_Preferences.setPrefs(LoginActivity.this,
+                                            Constants.IS_PRIME, "0");
+                                }
+
 
                                 if (jsonObject1.has("category_type")) {
 

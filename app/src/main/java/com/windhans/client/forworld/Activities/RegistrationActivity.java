@@ -5,6 +5,8 @@ import android.os.Build;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
+
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
@@ -119,7 +121,10 @@ public class RegistrationActivity extends AppCompatActivity {
         return res;
     }
 
-    private void userRegistration(String f_name, String l_name, String mobile, String email, String password, String reference_no) {
+    private void userRegistration(String f_name, String l_name, String mobile,
+                                  String email, String password, String reference_no) {
+
+
         GetOrderAPI getOrderAPI = MyConfig.getRetrofit(MyConfig.JSON_BASE_URL).create(GetOrderAPI.class);
         Call<ResponseBody> responseBodyCall=getOrderAPI.registerNewUser(f_name,
                 l_name,
@@ -133,12 +138,14 @@ public class RegistrationActivity extends AppCompatActivity {
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 try {
                     String output=response.body().string();
+                    Log.d("Vijendra123", "onResponse: "+output);
                     JSONObject jsonObject=new JSONObject(output);
                     boolean res=jsonObject.getBoolean("result");
                     String message="";
                     message=jsonObject.getString("reason");
                     if (res)
-                    { Toast.makeText(RegistrationActivity.this, message, Toast.LENGTH_SHORT).show();
+                    {
+                        Toast.makeText(RegistrationActivity.this, message, Toast.LENGTH_SHORT).show();
                         Intent intent=new Intent(RegistrationActivity.this, OTPVerification.class);
                         intent.putExtra(Constants.MOBILE_NUMBER,edt_mobile_No.getText().toString());
                         intent.putExtra(Constants.Flag, "1"); //flag 1 == registration

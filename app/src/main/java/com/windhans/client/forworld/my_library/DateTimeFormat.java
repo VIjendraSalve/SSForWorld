@@ -16,6 +16,7 @@ public class DateTimeFormat
     public static final SimpleDateFormat dateFormat_2 = new SimpleDateFormat("yyyy-MM-dd");
     public static final SimpleDateFormat dateFormat_3 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     public static final SimpleDateFormat dateFormat_4 = new SimpleDateFormat("d-MMM-yy hh:mm a");
+    public static final SimpleDateFormat dateFormat_4_1 = new SimpleDateFormat("d MMM yy hh:mm a");
     public static final SimpleDateFormat dateFormat_5 = new SimpleDateFormat("MMM dd, yyyy");
     public static final SimpleDateFormat dateFormat_1 = new SimpleDateFormat("d MMM yyyy");
     public static final SimpleDateFormat dateFormat_6 = new SimpleDateFormat("MMM");
@@ -51,6 +52,20 @@ public class DateTimeFormat
         }
         return date;
     }
+
+    public static String getDate1_9(String string)
+    {
+        Date date1 = null;
+        String date="";
+        try {
+            date1 = DateTimeFormat.dateFormat_3.parse(""+string);
+            date=DateTimeFormat.dateFormat_4_1.format(date1);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return date;
+    }
+
     public static String getDateNew(String string)
     {
         Date date1 = null;

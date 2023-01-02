@@ -116,6 +116,7 @@ public class ActivityProductList extends AppCompatActivity implements View.OnCli
 
         progressView = findViewById(R.id.progress_view);
         progressBar_endless = findViewById(R.id.progressBar_endless);
+        check_connection();
     }
 
   /*  @Override
@@ -259,11 +260,11 @@ public class ActivityProductList extends AppCompatActivity implements View.OnCli
         }
     }
 
-    @Override
+ /*   @Override
     public void onResume() {
         super.onResume();
-        check_connection();
-    }
+        //check_connection();
+    }*/
 
     private void getProductData() {
         progressDialog.show();

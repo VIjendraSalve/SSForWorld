@@ -30,7 +30,7 @@ public class Activity_My_Enquiry extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         TextView title = (TextView) toolbar.findViewById(R.id.tv_toolbar);
         title.setText(this.getResources().getString(R.string.enquirydetails));
-     /*   imageView=findViewById(R.id.iv_logo);
+     /* imageView=findViewById(R.id.iv_logo);
         imageView.setVisibility(View.GONE);*/
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);

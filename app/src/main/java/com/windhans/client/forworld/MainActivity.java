@@ -75,8 +75,12 @@ import com.windhans.client.forworld.Activities.BillActivity;
 import com.windhans.client.forworld.Activities.BusinessProfile;
 import com.windhans.client.forworld.Activities.ChangePasswordActivity;
 import com.windhans.client.forworld.Activities.EnquiryListActivity;
+import com.windhans.client.forworld.Activities.MyUserDiscountRequestActivity;
 import com.windhans.client.forworld.Activities.ProfileActivity;
 
+import com.windhans.client.forworld.Activities.QRCodeForVendorActivity;
+import com.windhans.client.forworld.Activities.RequestDiscountBarcodeScanActivity;
+import com.windhans.client.forworld.Activities.VendorDiscountRequestActivity;
 import com.windhans.client.forworld.Fragment.HomeFragment;
 import com.windhans.client.forworld.Fragment.HomeFragment1;
 import com.windhans.client.forworld.StartActivities.LoginActivity;
@@ -143,10 +147,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
 
-
-
-
-
         Dexter.withActivity(MainActivity.this)
                 .withPermissions(
                         Manifest.permission.ACCESS_NETWORK_STATE,
@@ -172,8 +172,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                     }).build();
                             mGoogleApiClient.connect();
                             enableLoc();
-
-
 
                             getSupportActionBar().setDisplayShowTitleEnabled(false);
 
@@ -204,16 +202,32 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                             nav_version.setText("version " + version);
 
 
+                            //1 : user & 2 : vendor
                             String user_type = (Shared_Preferences.getPrefs(MainActivity.this, Constants.REG_TYPE));
                             if (user_type.equals("1")) {
                                 hideItem();
                                 menu.setGroupVisible(R.id.member_grp, false);
                                 menu.setGroupVisible(R.id.member_grp1, true);
+
+                                    if (Shared_Preferences.getPrefs(MainActivity.this, Constants.IS_PRIME).equals("1")) {
+                                        menu.findItem(R.id.nav_reward).setVisible(true);
+                                    } else {
+                                        menu.findItem(R.id.nav_reward).setVisible(false);
+                                    }
+
                             } else {
+                                if (Shared_Preferences.getPrefs(MainActivity.this, Constants.IS_PRIME).equals("1")) {
+                                    menu.findItem(R.id.nav_reward).setVisible(true);
+                                } else {
+                                    menu.findItem(R.id.nav_reward).setVisible(false);
+                                }
+
                                 menu.setGroupVisible(R.id.member_grp, true);
                                 menu.setGroupVisible(R.id.member_grp1, false);
                                 hideItem();
                             }
+
+
 
 
                             Runnable runnable = new Runnable() {
@@ -238,7 +252,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                             String reg_id = Shared_Preferences.getPrefs(MainActivity.this, Constants.REG_TYPE);
                             Log.d("reg", "onCreate: "+reg_id);
-                            if (reg_id.equals("2")) {//user-1,vendor-2
+                            if (reg_id.equals("2"))
+                            {//user-1,vendor-2
                                 HomeFragment1 myEventHomeFragment = new HomeFragment1();
                                 // Because fragment two has been popup from the back stack, so it must be null.
                                 if (myEventHomeFragment == null) {
@@ -442,6 +457,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 menu.findItem(R.id.nav_offer_creation).setVisible(false);
                 menu.findItem(R.id.nav_offer_listing).setVisible(false);
+                menu.findItem(R.id.nav_my_qrcode).setVisible(false);
             }
         }
 
@@ -508,6 +524,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent intent = new Intent(MainActivity.this, Activity_Add_Offer.class);
             startActivity(intent);
 
+        }else if (id == R.id.nav_my_qrcode) {
+            Intent intent = new Intent(MainActivity.this, QRCodeForVendorActivity.class);
+            startActivity(intent);
+
         } else if (id == R.id.nav_offer_listing) {
             Intent intent = new Intent(MainActivity.this, ActivityOfferListing.class);
             startActivity(intent);
@@ -520,14 +540,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }else if (id == R.id.nav_myService) {
             Intent intent = new Intent(MainActivity.this, ActivityMyService.class);
             startActivity(intent);
+        }else if (id == R.id.nav_vendorRequest) {
+            Intent intent = new Intent(MainActivity.this, VendorDiscountRequestActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_myOrders) {
             Intent intent = new Intent(MainActivity.this, ActivityOrderListing.class);
             startActivity(intent);
-        } /*else if (id == R.id.nav_campaign) {
-            Intent intent = new Intent(MainActivity.this, Activity_Campaign.class);
+        } else if (id == R.id.nav_myqrrequest) {
+            Intent intent = new Intent(MainActivity.this, MyUserDiscountRequestActivity.class);
             startActivity(intent);
 
-        }*/ /*else if (id == R.id.nav_MyBalance) {
+        } /*else if (id == R.id.nav_MyBalance) {
             Intent intent = new Intent(MainActivity.this, Activity_My_Balance.class);
             startActivity(intent);
         }*/ else if (id == R.id.nav_reward) {
@@ -546,11 +569,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent intent=new Intent(MainActivity.this, Activity_My_Balance.class);
             startActivity(intent);
         }
-       /* else if(id==R.id.nav_customer_enquiry)
+        else if(id==R.id.nav_scan_barcode)
         {
-            Intent intent=new Intent(MainActivity.this, EnquiryListActivity.class);
+            Intent intent=new Intent(MainActivity.this, RequestDiscountBarcodeScanActivity.class);
             startActivity(intent);
-        }*/
+        }
        /* else if (id == R.id.nav_Add) {
             Intent intent = new Intent(MainActivity.this, Activity_Advertising.class);
             startActivity(intent);
